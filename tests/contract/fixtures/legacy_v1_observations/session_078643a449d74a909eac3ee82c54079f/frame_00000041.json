@@ -1,0 +1,54 @@
+{
+  "game": {
+    "title": null,
+    "type": "combat",
+    "mode": null,
+    "mode_duration": "bounded",
+    "confidence": null
+  },
+  "state": {
+    "phase": "active",
+    "screen_type": "gameplay",
+    "confidence": null
+  },
+  "participants": {
+    "primary": [
+      "EDDY",
+      "BRYAN"
+    ],
+    "count_visible": 2
+  },
+  "score": {
+    "a": 0,
+    "b": 1,
+    "type": "rounds_won",
+    "additional_scores": null
+  },
+  "clock": {
+    "visible": true,
+    "display": "97",
+    "value_seconds": 97,
+    "direction": "unknown"
+  },
+  "period": {
+    "type": "round",
+    "number": null,
+    "total": null
+  },
+  "progress": {
+    "type": null,
+    "current": null,
+    "total": null
+  },
+  "position": {
+    "current": null,
+    "total": null
+  },
+  "result": {
+    "visible": false,
+    "winner": null,
+    "outcome_type": null
+  },
+  "visible_entities": [],
+  "observation_confidence": null
+}

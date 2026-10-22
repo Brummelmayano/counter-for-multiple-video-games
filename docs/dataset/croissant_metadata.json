@@ -1,0 +1,139 @@
+{
+  "name": "PlayEnd",
+  "alternateName": "PlayEnd: Console Play Sessions from a Kinshasa Gaming Room for End-of-Game Detection",
+  "description": "Screen descriptions of 8,871 screenshots taken during real console play in a gaming room in Kinshasa, Democratic Republic of the Congo, with the start and the end of each game and the billing mode of each screenshot. A Raspberry Pi captured the console output at random intervals of 10 to 45 seconds; large vision-language models described each screenshot (game, score, clock, period, counters, participants), and every start and end of game was checked by hand. The data is meant for training and testing models that read a stream of screen descriptions and decide when a game starts or is over. The screenshots are not included.",
+  "url": "https://doi.org/10.5281/zenodo.23159321",
+  "identifier": "https://doi.org/10.5281/zenodo.23376730",
+  "datePublished": "2026-10-14",
+  "version": "1.1.0",
+  "license": "https://creativecommons.org/licenses/by-nc/4.0/",
+  "inLanguage": [
+    "en",
+    "fr"
+  ],
+  "keywords": [
+    "video games",
+    "end-of-game detection",
+    "event detection",
+    "change-point detection",
+    "irregular time series",
+    "vision-language model annotations",
+    "gaming room billing",
+    "Kinshasa"
+  ],
+  "creator": [
+    {
+      "name": "Brummel D. Mayano",
+      "orcid": "0009-0008-5433-5259",
+      "email": "brummelmayano@gmail.com"
+    },
+    {
+      "name": "Jordan F. Masakuna",
+      "orcid": "0000-0001-6165-8402"
+    }
+  ],
+  "affiliation": "Department of Mathematics, Statistics and Computer Science, University of Kinshasa",
+  "citeAs": "@misc{mayano2026playend, author = {Mayano, Brummel D. and Masakuna, Jordan F.}, title = {{PlayEnd}: Console Play Sessions from a Kinshasa Gaming Room for End-of-Game Detection}, year = {2026}, version = {1.1}, publisher = {Zenodo}, doi = {10.5281/zenodo.23159321}}",
+  "rai": {
+    "dataCollection": "A Raspberry Pi Zero 2 W was connected to the HDMI output of the console through a MacroSilicon MS2109 USB capture device. During each session it saved full JPEG screenshots (1280 x 720, quality 90) at random intervals between 10 and 45 seconds, with the time of reception from the monotonic clock of the device. The customers of the room were told about the capture and agreed orally.",
+    "dataCollectionType": [
+      "Direct capture of the video output of games consoles during normal use of a gaming room."
+    ],
+    "dataCollectionRawData": "JPEG screenshots of the console output. They are not part of this release; the published rows are descriptions of them written by vision-language models.",
+    "dataCollectionTimeframe": [
+      "2026-09-01",
+      "2026-09-30"
+    ],
+    "dataCollectionMissingData": "A value is left empty when the screen does not show it or when it cannot be read. The calendar dates stored by the capture device are wrong (no battery-backed clock, no network), so no calendar time is published and the gap between sessions is unknown; time within a session comes from the monotonic clock.",
+    "dataImputationProtocol": "No imputation. Missing values stay empty in the CSV files. In the encoded features, a missing number is written as 0 next to a 0/1 column saying that it is unknown.",
+    "dataPreprocessingProtocol": [
+      "Time is counted from the first screenshot of each session (t_s) and from the previous screenshot (delta_t_s), in nanoseconds written with nine decimals.",
+      "Real player names written on screen are replaced by stable pseudonyms (player_001, player_002...), matched as whole words without regard to case. Names of game characters and teams are kept.",
+      "The fields used for counting are copied from the JSON description of each screenshot into their own columns; the complete description stays in observation_json.",
+      "The encoded features apply the fixed transform sign(x) log(1 + |x|) and one-hot columns; nothing is fitted on the data."
+    ],
+    "dataManipulationProtocol": "Errors found after the first reading were fixed by later readings stored apart from the original annotations, which are never overwritten. The published row uses the latest reading and names it in corrected_by. Observations first written in contract version 2.0 were read again for the counters of version 2.1, so all rows follow version 2.1.",
+    "dataAnnotationProtocol": "Each screenshot was described by a vision-language model following a written observation contract with rules for each game (for example, round markers go into the score; a participant is recorded only if its name is written on screen). Claude Opus 5.5 read the score, clock and period on a zoomed crop of the score area. The ends of games and the segments billed by time were placed by Claude Opus 5.5 according to counting rules set by the first author. Each end and each time-billed segment was checked by the first author in a local tool showing the start of the game, its last screenshot, the screenshot that proves the end and the next one.",
+    "dataAnnotationPlatform": [
+      "Codex (first readings by GPT-6 Luna)",
+      "Claude Code (readings and corrections by Claude Opus 5.5)",
+      "A local validation tool run on the first author's computer (human review of ends, time-billed segments and an observation sample)"
+    ],
+    "dataAnnotationAnalysis": [
+      "Ends of games: 282 of 295 confirmed, 5 wrong and 8 doubtful; all settled before release.",
+      "Time-billed segments: 19 of 19 confirmed.",
+      "Sample of 576 observations (about 5 % per game): 540 correct, 16 wrong, 20 doubtful. Most cases were participant names inferred instead of written on screen and race positions in split screen, both handled by changing the convention and reading the frames again; two periods were wrong; the rest were questions without a wrong value. None concerned the score or the clock.",
+      "Second review (13 October 2026): 18 of 19 proposed end corrections, 19 of 21 observation corrections and 15 of 16 annotation conventions accepted by the first author; 25 starts checked one by one, 19 accepted and 6 corrected."
+    ],
+    "annotationsPerItem": "One machine-generated description per screenshot (its latest reading) and one set of end and billing labels per screenshot, reviewed by one person.",
+    "annotatorDemographics": [
+      "One human reviewer, the first author, who set the counting rules. No demographic data was collected."
+    ],
+    "machineAnnotationTools": [
+      "GPT-6 Luna, used through Codex",
+      "Claude Opus 5.5 (claude-opus-5-5), used through Claude Code"
+    ],
+    "dataUseCases": [
+      "Training and evaluating models that detect the end of a game in a sequence of screen descriptions with irregular time steps and missing values.",
+      "Research on event and change-point detection in sequences of structured observations.",
+      "Studying how errors in machine-generated descriptions affect a downstream detector."
+    ],
+    "dataBiases": [
+      "One gaming room in Kinshasa and the games played there: EA Sports FC, Fortnite and Mortal Kombat 1 account for most screenshots, while several titles appear in only a few games.",
+      "Some customers chose rarely played titles on purpose so that they would be recorded; the share of each title does not reflect what is usually played in the room.",
+      "The descriptions come from two vision-language models; their reading errors are part of the data, more often on names and split-screen views than on scores and clocks."
+    ],
+    "dataLimitations": [
+      "Results may not transfer to other rooms, consoles or games without testing on them first.",
+      "Most ends have no end screen in the data and are proved by what comes next (a menu, a new game), so the exact moment of the end is known only to within one capture interval.",
+      "Observations were checked by hand on a sample only; labels were all checked.",
+      "On some cutscenes, loading screens and black screens the game title was taken from neighbouring screenshots.",
+      "Not suitable for billing customers automatically without human review, nor for identifying players. Commercial use is not allowed by the license."
+    ],
+    "dataSocialImpact": "A reliable counter would let small gaming rooms charge per game without counting by hand, and make bills easier to check for customers. A false end makes a customer pay for one game too many, so any deployed counter needs a human check and a way for customers to dispute a bill. The data holds no images and no calendar times, and player names are pseudonymised.",
+    "personalSensitiveInformation": [
+      "Player names written on screen by some games (squad lists, kill feeds, spectator banners, the console sign-in screen) were replaced by pseudonyms; the list of real names is kept privately by the authors.",
+      "No images, faces, voices or calendar times are published. The gaming room is located in Kinshasa and is not named."
+    ],
+    "dataReleaseMaintenancePlan": "Maintained by Brummel D. Mayano. Corrections are released as new versions, each with its own DOI, and listed in the data card. A separate release of the screenshots, with player names blurred and access on request for non-commercial research, is planned.",
+    "hasSyntheticData": false
+  },
+  "provenance": {
+    "derivedFrom": "PlayEnd screenshots: 8,871 JPEG captures of the console output in 25 sessions (not released)",
+    "activities": [
+      {
+        "id": "capture",
+        "label": "Screenshot capture with a Raspberry Pi Zero 2 W in a gaming room in Kinshasa",
+        "started": "2026-09-01",
+        "ended": "2026-09-30",
+        "agents": [
+          "Brummel D. Mayano"
+        ]
+      },
+      {
+        "id": "machine-annotation",
+        "label": "Screen descriptions written by vision-language models under the observation contract",
+        "agents": [
+          "GPT-6 Luna",
+          "Claude Opus 5.5"
+        ]
+      },
+      {
+        "id": "human-validation",
+        "label": "Review of every end of game, every time-billed segment and a sample of observations",
+        "started": "2026-10-02",
+        "ended": "2026-10-04",
+        "agents": [
+          "Brummel D. Mayano"
+        ]
+      },
+      {
+        "id": "export",
+        "label": "Pseudonymisation, relative time and CSV export (python -m playend.dataset.export)",
+        "agents": [
+          "Brummel D. Mayano"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+$ /usr/bin/python3 -m unittest discover -s dossier_partie_VLM/observation_contract/tests -v
+test_actual_irregular_delta_and_session_reset (test_contract.ContractTest.test_actual_irregular_delta_and_session_reset) ... ok
+test_bad_types_temporal_keys_and_unknown_versions (test_contract.ContractTest.test_bad_types_temporal_keys_and_unknown_versions) ... ok
+test_checkpoint_contract_rejects_historical_or_wrong_order (test_contract.ContractTest.test_checkpoint_contract_rejects_historical_or_wrong_order) ... ok
+test_future_does_not_change_earlier_features (test_contract.ContractTest.test_future_does_not_change_earlier_features) ... ok
+test_generated_assets_are_current (test_contract.ContractTest.test_generated_assets_are_current) ... ok
+test_labels_require_correct_interval_and_verified_observations (test_contract.ContractTest.test_labels_require_correct_interval_and_verified_observations) ... ok
+test_legacy_proposals_remain_readable (test_contract.ContractTest.test_legacy_proposals_remain_readable) ... ok
+test_main_and_secondary_coexist_without_cross_talk (test_contract.ContractTest.test_main_and_secondary_coexist_without_cross_talk) ... ok
+test_manifest_cli_and_label_reader (test_contract.ContractTest.test_manifest_cli_and_label_reader) ... ok
+test_migration_preserves_source_and_masks_unreviewed_clock (test_contract.ContractTest.test_migration_preserves_source_and_masks_unreviewed_clock) ... ok
+test_multiple_same_kind_timers_order_invariant (test_contract.ContractTest.test_multiple_same_kind_timers_order_invariant) ... ok
+test_secondary_reset_never_populates_main_clock_or_target (test_contract.ContractTest.test_secondary_reset_never_populates_main_clock_or_target) ... ok
+test_time_conversion_and_single_image_direction (test_contract.ContractTest.test_time_conversion_and_single_image_direction) ... ok
+test_unknown_absent_and_zero_differ (test_contract.ContractTest.test_unknown_absent_and_zero_differ) ... ok
+test_unreadable_timer_and_ambiguous_role (test_contract.ContractTest.test_unreadable_timer_and_ambiguous_role) ... ok
+test_v2_examples_and_strict_schema (test_contract.ContractTest.test_v2_examples_and_strict_schema) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.464s
+
+OK
+
+$ /usr/bin/python3 -m unittest discover -s dossier_partie_VLM/openai_teacher/tests -v
+Clé enregistrée dans /tmp/tmpadmi6xc4/config/api_key avec permissions 600 (valeur non affichée).
+test_duplicate_keys_and_incomplete_response_are_not_saved (test_teacher_api.TeacherApiTest.test_duplicate_keys_and_incomplete_response_are_not_saved) ... ok
+test_full_jpeg_is_sent_and_result_is_resumable (test_teacher_api.TeacherApiTest.test_full_jpeg_is_sent_and_result_is_resumable) ... ok
+test_inventory_and_image_token_estimate (test_teacher_api.TeacherApiTest.test_inventory_and_image_token_estimate) ... ok
+test_key_dialog_saves_private_file_without_echoing_secret (test_teacher_api.TeacherApiTest.test_key_dialog_saves_private_file_without_echoing_secret) ... ok
+test_strict_schema_has_no_open_objects (test_teacher_api.TeacherApiTest.test_strict_schema_has_no_open_objects) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.788s
+
+OK
+
+$ /usr/bin/python3 dossier_partie_VLM/VLM_Handoff_Codex/scripts/validate_vlm_output.py dossier_partie_VLM/observation_contract/observation_v2.template.json --require-v2
+PASS (structure only; visual review still required)
+
+$ /usr/bin/python3 dossier_partie_VLM/VLM_Handoff_Codex/scripts/validate_package.py
+VLM HANDOFF PACKAGE VALIDATION PASS
+Required files: 12
+Root: /home/mayano/Documents/UNIKIN/master/Memoire_Master/dossier_partie_VLM/VLM_Handoff_Codex
+
+$ dossier_partie_VLM/evaluation_2026_09_08_heavy/runtime/venv/bin/python dossier_partie_VLM/evaluation_2026_09_08_heavy/scripts/run_benchmark.py --help
+usage: run_benchmark.py [-h] --model MODEL [--port PORT]
+                        [--suite {full,ablation,all}] [--stems [STEMS ...]]
+                        [--repetitions REPETITIONS] [--max-tokens MAX_TOKENS]
+                        [--marker-max-tokens MARKER_MAX_TOKENS]
+                        [--timeout TIMEOUT]
+                        [--startup-timeout STARTUP_TIMEOUT] [--no-repack]
+                        [--load-mode {auto,mmap,none}] [--run-tag RUN_TAG]
+                        [--server-verbosity SERVER_VERBOSITY]
+                        [--image-max-tokens IMAGE_MAX_TOKENS]
+                        [--context-size CONTEXT_SIZE]
+                        [--decoding {unconstrained,schema}]
+                        [--prompt-file PROMPT_FILE]
+                        [--observation-version {1,2}]
+                        [--condition {full_universal,full_hud_universal,hud_universal,hud_markers,hud_markers_roi}]
+
+options:
+  -h, --help            show this help message and exit
+  --model MODEL
+  --port PORT
+  --suite {full,ablation,all}
+  --stems [STEMS ...]
+  --repetitions REPETITIONS
+  --max-tokens MAX_TOKENS
+  --marker-max-tokens MARKER_MAX_TOKENS
+  --timeout TIMEOUT
+  --startup-timeout STARTUP_TIMEOUT
+  --no-repack           Avoid allocating a separate repacked copy of CPU
+                        weights
+  --load-mode {auto,mmap,none}
+  --run-tag RUN_TAG     Distinct runtime experiment label; preserves earlier
+                        results
+  --server-verbosity SERVER_VERBOSITY
+  --image-max-tokens IMAGE_MAX_TOKENS
+  --context-size CONTEXT_SIZE
+  --decoding {unconstrained,schema}
+  --prompt-file PROMPT_FILE
+                        Filename inside prompts; recorded as a distinct
+                        experimental condition
+  --observation-version {1,2}
+                        Version 2 separates secondary timers; use its matching
+                        full-frame prompt
+  --condition {full_universal,full_hud_universal,hud_universal,hud_markers,hud_markers_roi}
+
+$ /usr/bin/python3 dossier_partie_VLM/openai_teacher/teacher_api.py status
+Propositions JSON valides enregistrées: 0/2962
+Validité du JSON ne signifie pas vérification visuelle humaine.

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "playend"
+version = "0.1.0"
+description = "Intelligent counter for multiple video games: capture annotation, end-of-game labels and PlayEnd dataset tools (master's thesis, University of Kinshasa)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-NC-4.0" }
+authors = [
+    { name = "Brummel D. Mayano" },
+    { name = "Jordan F. Masakuna" },
+]
+dependencies = ["Pillow>=10"]
+
+[project.optional-dependencies]
+dev = ["jsonschema>=4", "ruff>=0.6"]
+# Install PyTorch first with the build that matches the machine (CPU or CUDA), see docs/training/README.md.
+train = ["matplotlib>=3.7", "numpy>=1.24", "scikit-learn>=1.7", "scipy>=1.10", "threadpoolctl>=3", "torch>=2.1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"playend.contract" = ["*.txt", "*.json", "prompts/*.txt", "prompts/sources/*.txt", "examples/*.json", "examples/*/*"]
+"playend.validation" = ["static/*"]
+"playend.student" = ["templates/*.png"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+src = ["src", "tests"]
+# The Raspberry Pi program is checked against its installation manifest: it is never reformatted.
+extend-exclude = ["archive", "build", "data", "raspberry_pi"]
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "UP", "SIM", "C4", "RET", "PIE"]
+# zip() over a sequence and its shifted copy is unequal on purpose; strict= would only add noise.
+ignore = ["B905"]
+
+[tool.ruff.lint.per-file-ignores]
+# The package re-exports every helper, so that a reading spec can start with "from playend.annotation.presets import *".
+"src/playend/annotation/presets/__init__.py" = ["F403"]

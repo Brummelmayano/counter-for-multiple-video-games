@@ -1,0 +1,54 @@
+{
+  "game": {
+    "title": null,
+    "type": "combat",
+    "mode": null,
+    "mode_duration": "unknown",
+    "confidence": null
+  },
+  "state": {
+    "phase": "pre_game",
+    "screen_type": "character_select",
+    "confidence": null
+  },
+  "participants": {
+    "primary": [
+      "BRYAN",
+      "KAZUYA"
+    ],
+    "count_visible": 2
+  },
+  "score": {
+    "a": null,
+    "b": null,
+    "type": null,
+    "additional_scores": null
+  },
+  "clock": {
+    "visible": false,
+    "display": null,
+    "value_seconds": null,
+    "direction": null
+  },
+  "period": {
+    "type": "none",
+    "number": null,
+    "total": null
+  },
+  "progress": {
+    "type": null,
+    "current": null,
+    "total": null
+  },
+  "position": {
+    "current": null,
+    "total": null
+  },
+  "result": {
+    "visible": false,
+    "winner": null,
+    "outcome_type": null
+  },
+  "visible_entities": [],
+  "observation_confidence": null
+}

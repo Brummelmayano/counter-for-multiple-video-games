@@ -1,0 +1,23 @@
+{
+ "built": "2026-10-05 17:29:23",
+ "commit": "54534cc77c7162b145c841ad6b0ad1e050f7343e",
+ "uncommitted_changes": [],
+ "package": "playend_v1.0",
+ "package_sha256": {
+  "data/playend_v1.0/LICENSE": "41003d4a74749c0220e33dd415042164b5a1093ed401f36277234f772d22d3d0",
+  "data/playend_v1.0/README.md": "548d6e3c58909ffc736c434633317ba2331fafd467bd577670a619e12827fd52",
+  "data/playend_v1.0/croissant.json": "fe9e66db87333efe838bac760193852a8dfee9a9a92889c68a305789958e39f4",
+  "data/playend_v1.0/data/features.csv": "c832e154e3584c04f596ab658a947ae7baad5dd6f3a9e2419a6f39c0b494b4a0",
+  "data/playend_v1.0/data/observations.csv": "e4c7b3bd76387cb8bdf4ccfe0eb09c8becb206e97e098dd31045859984859d29",
+  "data/playend_v1.0/data/sessions.csv": "59066a3d5a53cfd8c9cec11561d665e842e91e91100837252ae3954d2fc87af5",
+  "data/playend_v1.0/data/splits.csv": "9420c17724b683deff6205e163addab6ca1ec61bd5024274c78c0b79f9d1eea9",
+  "data/playend_v1.0/data/time_segments.csv": "64e773311f8faa2a71fa75ecb6b85bd586a7a8dd545a5379f5c6df47ac1a53ae",
+  "data/playend_v1.0/data/units.csv": "3ffd2fa4cbfcbe59f9cf059e140999c44cd3eadc55eaac053c816aeb0f024122",
+  "data/playend_v1.0/dictionary/feature_spec.json": "abb7199bebd33b05b60ce1392d180ad4345d9f99024f18a2440c88bb4c882b60",
+  "data/playend_v1.0/dictionary/observations_columns.csv": "7a8d21e889a987cd3c5bd3efd7dfe10f2c35771b2b49246e65eada549f14cea9",
+  "data/playend_v1.0/dictionary/sessions_columns.csv": "e16ceada3d43b583cb17705695446b966bb6dea461e1edf22c2171779e177083",
+  "data/playend_v1.0/dictionary/splits_columns.csv": "247c5f2999116d32bee3a053800cae570b191302971f3cb16a731a91acbe318b",
+  "data/playend_v1.0/dictionary/time_segments_columns.csv": "fb3f0fad12fc2f45d22892b99b8de28fa2ca184a6e0124eff50c989db66f45e1",
+  "data/playend_v1.0/dictionary/units_columns.csv": "a29bc44f3842527b9fcd0b256f456509dd172f9461edec9274ada03980a83425"
+ }
+}

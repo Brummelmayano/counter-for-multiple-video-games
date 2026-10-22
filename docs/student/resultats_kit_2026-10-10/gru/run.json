@@ -1,0 +1,266 @@
+{
+ "settings": {
+  "package": {
+   "data/observations.csv": "a59e7fe3025645f1c019396f1273ff4d9ccdd24adb08542ce3889d8cd321b1bb",
+   "data/units.csv": "3ffd2fa4cbfcbe59f9cf059e140999c44cd3eadc55eaac053c816aeb0f024122",
+   "data/splits.csv": "9420c17724b683deff6205e163addab6ca1ec61bd5024274c78c0b79f9d1eea9",
+   "features": "2095e57e747da39c68c3d449df62126a65d7687b140a6444f6ed6b9df6bc2c5b"
+  },
+  "feature_sha256": "b53454f1c438adced228a8618979dd02fe4a9fea854586196c47fa2a17648d49",
+  "models": [
+   "gru",
+   "logistic",
+   "boosting"
+  ],
+  "configs": {
+   "gru": [
+    {
+     "hidden": 16,
+     "dropout": 0.1728,
+     "weight_decay": 0.000576,
+     "learning_rate": 0.000914,
+     "pos_weight": true
+    },
+    {
+     "hidden": 64,
+     "dropout": 0.3418,
+     "weight_decay": 1.39e-05,
+     "learning_rate": 0.00126,
+     "pos_weight": false
+    },
+    {
+     "hidden": 64,
+     "dropout": 0.0555,
+     "weight_decay": 0.000246,
+     "learning_rate": 0.000468,
+     "pos_weight": false
+    },
+    {
+     "hidden": 16,
+     "dropout": 0.4591,
+     "weight_decay": 3.34e-05,
+     "learning_rate": 0.00205,
+     "pos_weight": true
+    },
+    {
+     "hidden": 16,
+     "dropout": 0.111,
+     "weight_decay": 2.97e-05,
+     "learning_rate": 0.00255,
+     "pos_weight": true
+    },
+    {
+     "hidden": 32,
+     "dropout": 0.4055,
+     "weight_decay": 0.000418,
+     "learning_rate": 0.00033,
+     "pos_weight": false
+    },
+    {
+     "hidden": 64,
+     "dropout": 0.2437,
+     "weight_decay": 7.08e-05,
+     "learning_rate": 0.00132,
+     "pos_weight": false
+    },
+    {
+     "hidden": 32,
+     "dropout": 0.2728,
+     "weight_decay": 0.000177,
+     "learning_rate": 0.000534,
+     "pos_weight": true
+    },
+    {
+     "hidden": 32,
+     "dropout": 0.0107,
+     "weight_decay": 8.81e-05,
+     "learning_rate": 0.000353,
+     "pos_weight": false
+    },
+    {
+     "hidden": 64,
+     "dropout": 0.4727,
+     "weight_decay": 0.000124,
+     "learning_rate": 0.00276,
+     "pos_weight": true
+    },
+    {
+     "hidden": 32,
+     "dropout": 0.1278,
+     "weight_decay": 2.07e-05,
+     "learning_rate": 0.000665,
+     "pos_weight": true
+    },
+    {
+     "hidden": 16,
+     "dropout": 0.3557,
+     "weight_decay": 0.000517,
+     "learning_rate": 0.00163,
+     "pos_weight": false
+    },
+    {
+     "hidden": 16,
+     "dropout": 0.1989,
+     "weight_decay": 0.000198,
+     "learning_rate": 0.00102,
+     "pos_weight": false
+    },
+    {
+     "hidden": 64,
+     "dropout": 0.2864,
+     "weight_decay": 4.77e-05,
+     "learning_rate": 0.000734,
+     "pos_weight": true
+    },
+    {
+     "hidden": 64,
+     "dropout": 0.066,
+     "weight_decay": 0.000827,
+     "learning_rate": 0.0019,
+     "pos_weight": true
+    },
+    {
+     "hidden": 32,
+     "dropout": 0.4194,
+     "weight_decay": 1.12e-05,
+     "learning_rate": 0.000437,
+     "pos_weight": false
+    }
+   ],
+   "logistic": [
+    {
+     "C": 0.0117,
+     "window": 0,
+     "class_weight": "balanced"
+    },
+    {
+     "C": 1.07,
+     "window": 2,
+     "class_weight": null
+    },
+    {
+     "C": 0.956,
+     "window": 0,
+     "class_weight": "balanced"
+    },
+    {
+     "C": 0.00842,
+     "window": 2,
+     "class_weight": null
+    },
+    {
+     "C": 0.00201,
+     "window": 0,
+     "class_weight": null
+    },
+    {
+     "C": 0.228,
+     "window": 2,
+     "class_weight": "balanced"
+    },
+    {
+     "C": 4.46,
+     "window": 0,
+     "class_weight": null
+    },
+    {
+     "C": 0.0488,
+     "window": 2,
+     "class_weight": "balanced"
+    }
+   ],
+   "boosting": [
+    {
+     "learning_rate": 0.05,
+     "max_leaf_nodes": 15,
+     "l2_regularization": 0.8802,
+     "class_weight": null
+    },
+    {
+     "learning_rate": 0.1,
+     "max_leaf_nodes": 31,
+     "l2_regularization": 0.3469,
+     "class_weight": "balanced"
+    },
+    {
+     "learning_rate": 0.1,
+     "max_leaf_nodes": 15,
+     "l2_regularization": 0.5352,
+     "class_weight": null
+    },
+    {
+     "learning_rate": 0.05,
+     "max_leaf_nodes": 31,
+     "l2_regularization": 0.1896,
+     "class_weight": "balanced"
+    },
+    {
+     "learning_rate": 0.05,
+     "max_leaf_nodes": 15,
+     "l2_regularization": 0.4366,
+     "class_weight": "balanced"
+    },
+    {
+     "learning_rate": 0.1,
+     "max_leaf_nodes": 31,
+     "l2_regularization": 0.837,
+     "class_weight": null
+    },
+    {
+     "learning_rate": 0.1,
+     "max_leaf_nodes": 15,
+     "l2_regularization": 0.0296,
+     "class_weight": "balanced"
+    },
+    {
+     "learning_rate": 0.05,
+     "max_leaf_nodes": 31,
+     "l2_regularization": 0.7425,
+     "class_weight": null
+    }
+   ]
+  },
+  "outers": [
+   "session_020621e73ac14debbf51545028c6bff9",
+   "session_078643a449d74a909eac3ee82c54079f",
+   "session_110294230cc748c29baea627984009e2",
+   "session_199eeb0e4226490a808f759bba5b21a5",
+   "session_279216690d5140bea6392ba33b84421f",
+   "session_378c621d05194353926a5794d6d67449",
+   "session_42dcc5f5e29e4217af45fe2ac584b8bc",
+   "session_6d175eb2aa964173b1739da41c5c2c5b",
+   "session_6d48fd478826483fa418f43513a00c00",
+   "session_7616a3a54b7649d182933c76ac4afedd",
+   "session_799ac295e0d044839beac8c3badd7d97",
+   "session_82346bb7ea1941a49040b3475986b6cc",
+   "session_8e58b139561e4224b0c7afca316f0824",
+   "session_9e0e6a4f9955452db82fb7212bc4bf89",
+   "session_a4e41f30a5184a47b80897722ac20d5e",
+   "session_a80bda9c83f048e5a5e12a38f2b21372",
+   "session_c93ed3136f834e2abdcfef184e2defa3",
+   "session_ccfc6589f8544d7fa6b59351b2f06db9",
+   "session_d8b709c4fce048cebc352d4b94262a93",
+   "session_da79d42054db4e03a32bd5aafda8104b",
+   "session_f0067594e2b8442a838e924a2b7e7e7f",
+   "session_f8c2843d80e8459181a5e61230a17815",
+   "session_fdb795498da4426caef3a44ea33c4c57",
+   "session_fe69758b705f4cc5badeabb25b5b8756",
+   "session_ff1c7245efc04fdb8acf61d38b8aaa24",
+   "all"
+  ],
+  "seeds": 5,
+  "max_epochs": 300
+ },
+ "started": "2026-10-10 00:08:17",
+ "machine": {
+  "python": "3.12.13",
+  "torch": "2.13.0",
+  "numpy": "2.5.2",
+  "scikit-learn": "1.9.0",
+  "scipy": "1.18.0",
+  "cuda": null,
+  "platform": "Windows-11-10.0.26300-SP0",
+  "cpus": 16,
+  "free_memory_gb": 18.4
+ }
+}

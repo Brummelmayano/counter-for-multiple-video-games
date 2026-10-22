@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "playend-student"
+version = "1.0"
+description = "The student of PlayEnd on a machine with a graphics card: detectors retrained on its observations, LoRA for its VLM reader."
+requires-python = ">=3.10"
+# launch.py installs PyTorch first, in the build that matches the graphics card.
+dependencies = [
+    "accelerate>=1.0",
+    "huggingface_hub>=0.30",
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+    "peft>=0.15",
+    "pillow>=10",
+    "safetensors>=0.4",
+    "scikit-learn>=1.7",
+    "scipy>=1.10",
+    "threadpoolctl>=3",
+    "torch>=2.6",
+    "transformers>=5.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

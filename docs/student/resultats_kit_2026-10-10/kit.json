@@ -1,0 +1,47 @@
+{
+ "built": "2026-10-08 18:06:22",
+ "commit": "405d67d831c08d1c8c19a7541ebeb28e830c5609",
+ "uncommitted_code": [
+  "M src/playend/common/paths.py",
+  " M src/playend/training/report.py",
+  "?? src/playend/student/",
+  "?? student_kit/"
+ ],
+ "llama_cpp": {
+  "release": "b11429",
+  "commit": "d81235049384534c167caea52b85a694f6103d14",
+  "note": "same commit as the llama.cpp v0.6.0 compiled on the Raspberry Pi",
+  "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11429/{}",
+  "source": "https://github.com/ggml-org/llama.cpp/archive/refs/tags/b11429.zip",
+  "builds": {
+   "windows": {
+    "vulkan": [
+     "llama-b11429-bin-win-vulkan-x64.zip",
+     "1bfe78ad9168b79fa02bf67f6af9f5e17a966d824d77238517f7bef12ac73b36"
+    ]
+   },
+   "linux": {
+    "vulkan": [
+     "llama-b11429-bin-ubuntu-vulkan-x64.tar.gz",
+     "632c4e98feba2b94407a2130e3133e0c3aefb0ea1ab41337e926d8bfafdd0b74"
+    ]
+   }
+  }
+ },
+ "gguf": {
+  "repo": "LiquidAI/LFM2.5-VL-450M-GGUF",
+  "revision": "1abed04b6fe71314d8c446a1371c03d7c332266d",
+  "files": {
+   "LFM2.5-VL-450M-Q4_0.gguf": "6d2757dd0f0b98aea7dc90477bb5b3a0df1089be85ef92943f8cecb05121ccbf",
+   "mmproj-LFM2.5-VL-450m-Q8_0.gguf": "ebfc428baa37efad8bae93864f914b2634a09009f91ad59f974fe1a1565d8561"
+  }
+ },
+ "model": {
+  "repo": "LiquidAI/LFM2.5-VL-450M",
+  "revision": "fc6221ca597f3315e4f82fc2df606783267b34ba"
+ },
+ "examples": {
+  "train": 4339,
+  "test": 1273
+ }
+}

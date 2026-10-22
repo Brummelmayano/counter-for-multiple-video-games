@@ -1,0 +1,825 @@
+{
+ "examples": 1273,
+ "screens_without_hud": 271,
+ "ocr_readings": "build/student/readings_ocr.json",
+ "readers": {
+  "base_grammar": {
+   "all_fields": {
+    "values": 2689,
+    "correct": 0.6552621792487914,
+    "wrong": 0.3417627370769803,
+    "missed": 0.0029750836742283376,
+    "extra": 728
+   },
+   "names_excluded": {
+    "values": 1850,
+    "correct": 0.6610810810810811,
+    "wrong": 0.3356756756756757,
+    "missed": 0.003243243243243243,
+    "extra": 638
+   },
+   "screens_without_hud_with_invented_values": 271,
+   "by_field": {
+    "Beach Buggy Racing 2 / progress_current": {
+     "extra": 6,
+     "wrong": 32,
+     "correct": 1
+    },
+    "Call of Duty: Warzone / period_number": {
+     "extra": 37,
+     "correct": 2,
+     "wrong": 1
+    },
+    "Call of Duty: Warzone / players_remaining": {
+     "correct": 24,
+     "wrong": 15,
+     "extra": 1
+    },
+    "Call of Duty: Warzone / teams_remaining": {
+     "correct": 26,
+     "wrong": 13,
+     "extra": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_a": {
+     "wrong": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_b": {
+     "correct": 1
+    },
+    "EA Sports FC / clock_display": {
+     "correct": 356,
+     "wrong": 23,
+     "extra": 43
+    },
+    "EA Sports FC / participant_a": {
+     "correct": 253,
+     "wrong": 122,
+     "extra": 45,
+     "missed": 1
+    },
+    "EA Sports FC / participant_b": {
+     "correct": 264,
+     "wrong": 111,
+     "extra": 45,
+     "missed": 1
+    },
+    "EA Sports FC / score_a": {
+     "correct": 342,
+     "extra": 27,
+     "missed": 3,
+     "wrong": 51
+    },
+    "EA Sports FC / score_b": {
+     "correct": 356,
+     "extra": 27,
+     "wrong": 37,
+     "missed": 3
+    },
+    "EA Sports UFC 5 / clock_display": {
+     "wrong": 1,
+     "correct": 5
+    },
+    "EA Sports UFC 5 / participant_a": {
+     "wrong": 6
+    },
+    "EA Sports UFC 5 / participant_b": {
+     "wrong": 6
+    },
+    "EA Sports UFC 5 / period_number": {
+     "wrong": 1,
+     "correct": 5
+    },
+    "Fortnite / players_remaining": {
+     "correct": 11,
+     "wrong": 132,
+     "extra": 44
+    },
+    "J-Stars Victory VS+ / clock_display": {
+     "correct": 4,
+     "wrong": 23,
+     "extra": 2
+    },
+    "J-Stars Victory VS+ / participant_a": {
+     "wrong": 21,
+     "correct": 8
+    },
+    "Mortal Kombat 1 / clock_display": {
+     "wrong": 239,
+     "correct": 9,
+     "extra": 6
+    },
+    "Mortal Kombat 1 / score_a": {
+     "correct": 20,
+     "extra": 222,
+     "wrong": 12
+    },
+    "Mortal Kombat 1 / score_b": {
+     "correct": 14,
+     "wrong": 18,
+     "extra": 222
+    },
+    "Naruto Storm Connections / clock_display": {
+     "correct": 23
+    },
+    "Naruto Storm Connections / participant_a": {
+     "wrong": 17,
+     "correct": 6
+    },
+    "Naruto Storm Connections / participant_b": {
+     "wrong": 15,
+     "correct": 8
+    },
+    "Naruto Storm Connections / score_a": {
+     "correct": 13,
+     "wrong": 10
+    },
+    "Naruto Storm Connections / score_b": {
+     "correct": 11,
+     "wrong": 12
+    }
+   }
+  },
+  "lora_free": {
+   "all_fields": {
+    "values": 2689,
+    "correct": 0.916325771662328,
+    "wrong": 0.02900706582372629,
+    "missed": 0.054667162513945704,
+    "extra": 83
+   },
+   "names_excluded": {
+    "values": 1850,
+    "correct": 0.9481081081081081,
+    "wrong": 0.01891891891891892,
+    "missed": 0.032972972972972976,
+    "extra": 83
+   },
+   "screens_without_hud_with_invented_values": 1,
+   "by_field": {
+    "Beach Buggy Racing 2 / progress_current": {
+     "correct": 33
+    },
+    "Call of Duty: Warzone / period_number": {
+     "extra": 28,
+     "correct": 3
+    },
+    "Call of Duty: Warzone / players_remaining": {
+     "correct": 37,
+     "wrong": 2
+    },
+    "Call of Duty: Warzone / teams_remaining": {
+     "correct": 38,
+     "missed": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_a": {
+     "correct": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_b": {
+     "wrong": 1
+    },
+    "EA Sports FC / clock_display": {
+     "correct": 376,
+     "missed": 2,
+     "wrong": 1
+    },
+    "EA Sports FC / participant_a": {
+     "correct": 333,
+     "missed": 41,
+     "wrong": 2
+    },
+    "EA Sports FC / participant_b": {
+     "correct": 335,
+     "missed": 41
+    },
+    "EA Sports FC / score_a": {
+     "correct": 369,
+     "extra": 4,
+     "missed": 22,
+     "wrong": 5
+    },
+    "EA Sports FC / score_b": {
+     "correct": 373,
+     "extra": 4,
+     "missed": 22,
+     "wrong": 1
+    },
+    "EA Sports UFC 5 / clock_display": {
+     "wrong": 1,
+     "correct": 5
+    },
+    "EA Sports UFC 5 / participant_a": {
+     "correct": 5,
+     "wrong": 1
+    },
+    "EA Sports UFC 5 / participant_b": {
+     "correct": 6
+    },
+    "EA Sports UFC 5 / period_number": {
+     "missed": 1,
+     "correct": 5
+    },
+    "Fortnite / players_remaining": {
+     "correct": 134,
+     "missed": 7,
+     "wrong": 2,
+     "extra": 34
+    },
+    "J-Stars Victory VS+ / clock_display": {
+     "correct": 12,
+     "wrong": 14,
+     "missed": 1
+    },
+    "J-Stars Victory VS+ / participant_a": {
+     "correct": 13,
+     "wrong": 16
+    },
+    "Mortal Kombat 1 / clock_display": {
+     "correct": 245,
+     "missed": 2,
+     "extra": 5,
+     "wrong": 1
+    },
+    "Mortal Kombat 1 / score_a": {
+     "correct": 31,
+     "missed": 1,
+     "extra": 4
+    },
+    "Mortal Kombat 1 / score_b": {
+     "correct": 29,
+     "missed": 1,
+     "extra": 4,
+     "wrong": 2
+    },
+    "Naruto Storm Connections / clock_display": {
+     "correct": 23
+    },
+    "Naruto Storm Connections / participant_a": {
+     "wrong": 15,
+     "correct": 6,
+     "missed": 2
+    },
+    "Naruto Storm Connections / participant_b": {
+     "wrong": 9,
+     "correct": 12,
+     "missed": 2
+    },
+    "Naruto Storm Connections / score_a": {
+     "correct": 22,
+     "wrong": 1
+    },
+    "Naruto Storm Connections / score_b": {
+     "correct": 18,
+     "wrong": 4,
+     "missed": 1
+    }
+   }
+  },
+  "lora_grammar": {
+   "all_fields": {
+    "values": 2689,
+    "correct": 0.9174414280401636,
+    "wrong": 0.031238378579397545,
+    "missed": 0.051320193380438826,
+    "extra": 86
+   },
+   "names_excluded": {
+    "values": 1850,
+    "correct": 0.9491891891891892,
+    "wrong": 0.01945945945945946,
+    "missed": 0.03135135135135135,
+    "extra": 86
+   },
+   "screens_without_hud_with_invented_values": 6,
+   "by_field": {
+    "Beach Buggy Racing 2 / progress_current": {
+     "correct": 33
+    },
+    "Call of Duty: Warzone / period_number": {
+     "extra": 28,
+     "correct": 3
+    },
+    "Call of Duty: Warzone / players_remaining": {
+     "correct": 37,
+     "wrong": 2
+    },
+    "Call of Duty: Warzone / teams_remaining": {
+     "correct": 39
+    },
+    "Dragon Ball Sparking! ZERO / lives_a": {
+     "correct": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_b": {
+     "wrong": 1
+    },
+    "EA Sports FC / clock_display": {
+     "correct": 377,
+     "missed": 1,
+     "extra": 1,
+     "wrong": 1
+    },
+    "EA Sports FC / participant_a": {
+     "correct": 334,
+     "missed": 38,
+     "wrong": 4
+    },
+    "EA Sports FC / participant_b": {
+     "correct": 335,
+     "missed": 38,
+     "wrong": 3
+    },
+    "EA Sports FC / score_a": {
+     "correct": 369,
+     "extra": 4,
+     "missed": 22,
+     "wrong": 5
+    },
+    "EA Sports FC / score_b": {
+     "correct": 373,
+     "extra": 4,
+     "missed": 22,
+     "wrong": 1
+    },
+    "EA Sports UFC 5 / clock_display": {
+     "wrong": 1,
+     "correct": 5
+    },
+    "EA Sports UFC 5 / participant_a": {
+     "correct": 5,
+     "wrong": 1
+    },
+    "EA Sports UFC 5 / participant_b": {
+     "correct": 6
+    },
+    "EA Sports UFC 5 / period_number": {
+     "missed": 1,
+     "correct": 5
+    },
+    "Fortnite / players_remaining": {
+     "correct": 134,
+     "missed": 7,
+     "wrong": 2,
+     "extra": 34
+    },
+    "J-Stars Victory VS+ / clock_display": {
+     "correct": 12,
+     "wrong": 15,
+     "extra": 2
+    },
+    "J-Stars Victory VS+ / participant_a": {
+     "correct": 13,
+     "wrong": 16
+    },
+    "Mortal Kombat 1 / clock_display": {
+     "correct": 245,
+     "missed": 2,
+     "extra": 5,
+     "wrong": 1
+    },
+    "Mortal Kombat 1 / score_a": {
+     "correct": 31,
+     "missed": 1,
+     "extra": 4
+    },
+    "Mortal Kombat 1 / score_b": {
+     "correct": 29,
+     "missed": 1,
+     "extra": 4,
+     "wrong": 2
+    },
+    "Naruto Storm Connections / clock_display": {
+     "correct": 23
+    },
+    "Naruto Storm Connections / participant_a": {
+     "wrong": 15,
+     "correct": 6,
+     "missed": 2
+    },
+    "Naruto Storm Connections / participant_b": {
+     "wrong": 9,
+     "correct": 12,
+     "missed": 2
+    },
+    "Naruto Storm Connections / score_a": {
+     "correct": 22,
+     "wrong": 1
+    },
+    "Naruto Storm Connections / score_b": {
+     "correct": 18,
+     "wrong": 4,
+     "missed": 1
+    }
+   }
+  },
+  "official_free": {
+   "all_fields": {
+    "values": 2689,
+    "correct": 0.3153588694682038,
+    "wrong": 0.19077724060989215,
+    "missed": 0.49386388992190405,
+    "extra": 477
+   },
+   "names_excluded": {
+    "values": 1850,
+    "correct": 0.3248648648648649,
+    "wrong": 0.23351351351351352,
+    "missed": 0.4416216216216216,
+    "extra": 462
+   },
+   "screens_without_hud_with_invented_values": 207,
+   "by_field": {
+    "Beach Buggy Racing 2 / progress_current": {
+     "missed": 33
+    },
+    "Call of Duty: Warzone / period_number": {
+     "extra": 24,
+     "missed": 2,
+     "wrong": 1
+    },
+    "Call of Duty: Warzone / players_remaining": {
+     "correct": 18,
+     "missed": 14,
+     "wrong": 7,
+     "extra": 1
+    },
+    "Call of Duty: Warzone / teams_remaining": {
+     "correct": 18,
+     "missed": 12,
+     "wrong": 9,
+     "extra": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_a": {
+     "missed": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_b": {
+     "missed": 1
+    },
+    "EA Sports FC / clock_display": {
+     "correct": 227,
+     "missed": 152
+    },
+    "EA Sports FC / participant_a": {
+     "correct": 178,
+     "missed": 147,
+     "wrong": 51,
+     "extra": 11
+    },
+    "EA Sports FC / participant_b": {
+     "missed": 302,
+     "correct": 66,
+     "wrong": 8,
+     "extra": 4
+    },
+    "EA Sports FC / score_a": {
+     "correct": 164,
+     "extra": 23,
+     "wrong": 69,
+     "missed": 163
+    },
+    "EA Sports FC / score_b": {
+     "correct": 152,
+     "missed": 211,
+     "wrong": 33,
+     "extra": 22
+    },
+    "EA Sports UFC 5 / clock_display": {
+     "missed": 3,
+     "correct": 3
+    },
+    "EA Sports UFC 5 / participant_a": {
+     "wrong": 6
+    },
+    "EA Sports UFC 5 / participant_b": {
+     "wrong": 6
+    },
+    "EA Sports UFC 5 / period_number": {
+     "wrong": 1,
+     "missed": 2,
+     "correct": 3
+    },
+    "Fortnite / players_remaining": {
+     "missed": 139,
+     "extra": 5,
+     "wrong": 4
+    },
+    "J-Stars Victory VS+ / clock_display": {
+     "missed": 19,
+     "wrong": 7,
+     "correct": 1,
+     "extra": 1
+    },
+    "J-Stars Victory VS+ / participant_a": {
+     "missed": 16,
+     "wrong": 10,
+     "correct": 3
+    },
+    "Mortal Kombat 1 / clock_display": {
+     "wrong": 232,
+     "missed": 9,
+     "correct": 7,
+     "extra": 6
+    },
+    "Mortal Kombat 1 / score_a": {
+     "wrong": 26,
+     "missed": 3,
+     "extra": 203,
+     "correct": 3
+    },
+    "Mortal Kombat 1 / score_b": {
+     "missed": 5,
+     "wrong": 24,
+     "extra": 176,
+     "correct": 3
+    },
+    "Naruto Storm Connections / clock_display": {
+     "missed": 23
+    },
+    "Naruto Storm Connections / participant_a": {
+     "missed": 23
+    },
+    "Naruto Storm Connections / participant_b": {
+     "missed": 23
+    },
+    "Naruto Storm Connections / score_a": {
+     "missed": 10,
+     "wrong": 13
+    },
+    "Naruto Storm Connections / score_b": {
+     "missed": 15,
+     "wrong": 6,
+     "correct": 2
+    }
+   }
+  },
+  "official_grammar": {
+   "all_fields": {
+    "values": 2689,
+    "correct": 0.6552621792487914,
+    "wrong": 0.3417627370769803,
+    "missed": 0.0029750836742283376,
+    "extra": 728
+   },
+   "names_excluded": {
+    "values": 1850,
+    "correct": 0.6610810810810811,
+    "wrong": 0.3356756756756757,
+    "missed": 0.003243243243243243,
+    "extra": 638
+   },
+   "screens_without_hud_with_invented_values": 271,
+   "by_field": {
+    "Beach Buggy Racing 2 / progress_current": {
+     "extra": 6,
+     "wrong": 32,
+     "correct": 1
+    },
+    "Call of Duty: Warzone / period_number": {
+     "extra": 37,
+     "correct": 2,
+     "wrong": 1
+    },
+    "Call of Duty: Warzone / players_remaining": {
+     "correct": 24,
+     "wrong": 15,
+     "extra": 1
+    },
+    "Call of Duty: Warzone / teams_remaining": {
+     "correct": 26,
+     "wrong": 13,
+     "extra": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_a": {
+     "wrong": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_b": {
+     "correct": 1
+    },
+    "EA Sports FC / clock_display": {
+     "correct": 356,
+     "wrong": 23,
+     "extra": 43
+    },
+    "EA Sports FC / participant_a": {
+     "correct": 253,
+     "wrong": 122,
+     "extra": 45,
+     "missed": 1
+    },
+    "EA Sports FC / participant_b": {
+     "correct": 264,
+     "wrong": 111,
+     "extra": 45,
+     "missed": 1
+    },
+    "EA Sports FC / score_a": {
+     "correct": 342,
+     "extra": 27,
+     "missed": 3,
+     "wrong": 51
+    },
+    "EA Sports FC / score_b": {
+     "correct": 356,
+     "extra": 27,
+     "wrong": 37,
+     "missed": 3
+    },
+    "EA Sports UFC 5 / clock_display": {
+     "wrong": 1,
+     "correct": 5
+    },
+    "EA Sports UFC 5 / participant_a": {
+     "wrong": 6
+    },
+    "EA Sports UFC 5 / participant_b": {
+     "wrong": 6
+    },
+    "EA Sports UFC 5 / period_number": {
+     "wrong": 1,
+     "correct": 5
+    },
+    "Fortnite / players_remaining": {
+     "correct": 11,
+     "wrong": 132,
+     "extra": 44
+    },
+    "J-Stars Victory VS+ / clock_display": {
+     "correct": 4,
+     "wrong": 23,
+     "extra": 2
+    },
+    "J-Stars Victory VS+ / participant_a": {
+     "wrong": 21,
+     "correct": 8
+    },
+    "Mortal Kombat 1 / clock_display": {
+     "wrong": 239,
+     "correct": 9,
+     "extra": 6
+    },
+    "Mortal Kombat 1 / score_a": {
+     "correct": 20,
+     "extra": 222,
+     "wrong": 12
+    },
+    "Mortal Kombat 1 / score_b": {
+     "correct": 14,
+     "wrong": 18,
+     "extra": 222
+    },
+    "Naruto Storm Connections / clock_display": {
+     "correct": 23
+    },
+    "Naruto Storm Connections / participant_a": {
+     "wrong": 17,
+     "correct": 6
+    },
+    "Naruto Storm Connections / participant_b": {
+     "wrong": 15,
+     "correct": 8
+    },
+    "Naruto Storm Connections / score_a": {
+     "correct": 13,
+     "wrong": 10
+    },
+    "Naruto Storm Connections / score_b": {
+     "correct": 11,
+     "wrong": 12
+    }
+   }
+  },
+  "ocr": {
+   "all_fields": {
+    "values": 2689,
+    "correct": 0.753068055039048,
+    "wrong": 0.02900706582372629,
+    "missed": 0.21792487913722575,
+    "extra": 115
+   },
+   "names_excluded": {
+    "values": 1850,
+    "correct": 0.7497297297297297,
+    "wrong": 0.028648648648648647,
+    "missed": 0.22162162162162163,
+    "extra": 81
+   },
+   "screens_without_hud_with_invented_values": null,
+   "by_field": {
+    "Beach Buggy Racing 2 / progress_current": {
+     "correct": 27,
+     "missed": 6
+    },
+    "Call of Duty: Warzone / period_number": {
+     "extra": 20,
+     "correct": 2,
+     "missed": 1
+    },
+    "Call of Duty: Warzone / players_remaining": {
+     "correct": 29,
+     "wrong": 10
+    },
+    "Call of Duty: Warzone / teams_remaining": {
+     "correct": 27,
+     "missed": 6,
+     "wrong": 6
+    },
+    "Dragon Ball Sparking! ZERO / lives_a": {
+     "correct": 1
+    },
+    "Dragon Ball Sparking! ZERO / lives_b": {
+     "correct": 1
+    },
+    "EA Sports FC / clock_display": {
+     "correct": 362,
+     "missed": 17
+    },
+    "EA Sports FC / participant_a": {
+     "correct": 296,
+     "missed": 79,
+     "extra": 17,
+     "wrong": 1
+    },
+    "EA Sports FC / participant_b": {
+     "correct": 297,
+     "missed": 79,
+     "extra": 17
+    },
+    "EA Sports FC / score_a": {
+     "missed": 175,
+     "wrong": 3,
+     "correct": 218,
+     "extra": 1
+    },
+    "EA Sports FC / score_b": {
+     "missed": 175,
+     "correct": 219,
+     "wrong": 2,
+     "extra": 1
+    },
+    "EA Sports UFC 5 / clock_display": {
+     "missed": 1,
+     "correct": 5
+    },
+    "EA Sports UFC 5 / participant_a": {
+     "correct": 6
+    },
+    "EA Sports UFC 5 / participant_b": {
+     "correct": 3,
+     "wrong": 3
+    },
+    "EA Sports UFC 5 / period_number": {
+     "missed": 1,
+     "correct": 5
+    },
+    "Fortnite / players_remaining": {
+     "missed": 17,
+     "correct": 119,
+     "wrong": 7,
+     "extra": 35
+    },
+    "J-Stars Victory VS+ / clock_display": {
+     "correct": 27,
+     "extra": 2
+    },
+    "J-Stars Victory VS+ / participant_a": {
+     "wrong": 13,
+     "correct": 16
+    },
+    "Mortal Kombat 1 / clock_display": {
+     "correct": 216,
+     "wrong": 22,
+     "missed": 10,
+     "extra": 1
+    },
+    "Mortal Kombat 1 / score_a": {
+     "correct": 31,
+     "extra": 10,
+     "missed": 1
+    },
+    "Mortal Kombat 1 / score_b": {
+     "correct": 31,
+     "extra": 11,
+     "wrong": 1
+    },
+    "Naruto Storm Connections / clock_display": {
+     "correct": 21,
+     "wrong": 2
+    },
+    "Naruto Storm Connections / participant_a": {
+     "wrong": 3,
+     "missed": 5,
+     "correct": 15
+    },
+    "Naruto Storm Connections / participant_b": {
+     "wrong": 5,
+     "missed": 13,
+     "correct": 5
+    },
+    "Naruto Storm Connections / score_a": {
+     "correct": 23
+    },
+    "Naruto Storm Connections / score_b": {
+     "correct": 23
+    }
+   }
+  }
+ }
+}

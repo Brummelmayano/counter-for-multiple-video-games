@@ -1,0 +1,20 @@
+[Unit]
+Description=Diagnostic du demarrage du collecteur de gameplay
+After=local-fs.target
+
+[Service]
+Type=simple
+User=brummel
+Group=brummel
+SupplementaryGroups=adm
+WorkingDirectory=/home/brummel/Desktop/Capture-dataset-jeux
+ExecStart=/bin/sh /home/brummel/Desktop/Capture-dataset-jeux/diagnostic_boot.sh
+Restart=no
+TimeoutStopSec=5
+KillMode=control-group
+UMask=0022
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

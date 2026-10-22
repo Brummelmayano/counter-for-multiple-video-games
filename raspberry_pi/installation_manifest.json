@@ -1,0 +1,17 @@
+{
+  "files": {
+    "verify_dataset.py": "1ca9be27c1f13a9bdbbd717156bf3985c587a6b1fc667a979f2d85a295ee7da5",
+    "config.json": "f0bab2767f01fee4b667674f1a70473445f79cda99ec50dd6c87171bfa85caa6",
+    "mode.py": "6959f0592a0022e3c6621a5124363186fc7a153b5f537de9daf9bd2449f7ae16",
+    "README.md": "da9033d3781205d13d5a9831998a2c8c2bf341223512dd3fd43c83275b6625bc",
+    "capture.py": "db00e400d932915b5ff7d10e1726dcef3098b817440f20ae3e9d34d1144c21f1",
+    "capture-dataset-jeux.service": "0518380019d4568ea0535c25edec32fb8cb73b64d4ad6135346b7e83ed74d12f",
+    "tests/test_process.py": "1c30f59271eb8c0cdf30927d72259fb940e3df448f95df55028928d0a903262e",
+    "tests/test_capture.py": "542562b463d549e1da6937ca047d4527e3223c019d373789584fbf2a5644debd",
+    "diagnostic_boot.sh": "f7d181dbe9b2f1c85eeadd809b03d6fe2f18a5f8c849d45174652dc456e526ea",
+    "capture-dataset-diagnostic.service": "ac65ec38b7ff50d147978da81928a36ab25a802c28746c55954c5a8f04b7b1f4"
+  },
+  "interval_min_s": 10,
+  "interval_max_s": 45,
+  "status": "software_verified_hardware_pending"
+}

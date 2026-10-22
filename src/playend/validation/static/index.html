@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Validation des annotations</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1d2330; --muted: #5d6677; --line: #dde1e8;
+    --ok: #1f8a4c; --bad: #c0392b; --doubt: #b7791f; --accent: #2f5bd3; --chip: #eef1f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14171c; --panel: #1c2027; --text: #e6e9ef; --muted: #9aa3b2; --line: #2c323c;
+            --ok: #38b26b; --bad: #e0604f; --doubt: #d9a441; --accent: #6f93ff; --chip: #262b34; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.45 system-ui, sans-serif; }
+  header { position: sticky; top: 0; z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line);
+           padding: 10px 16px; display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+  header h1 { font-size: 16px; margin: 0; }
+  .progress { display: flex; gap: 14px; flex-wrap: wrap; color: var(--muted); font-size: 13px; }
+  .progress b { color: var(--text); }
+  select, input[type=text], textarea { font: inherit; color: var(--text); background: var(--bg);
+           border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+  label.toggle { font-size: 13px; color: var(--muted); display: flex; gap: 6px; align-items: center; }
+  main { max-width: 1400px; margin: 0 auto; padding: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .chip { background: var(--chip); border-radius: 999px; padding: 2px 10px; font-size: 12px; color: var(--muted); }
+  .chip.risk { color: var(--bad); }
+  h2 { font-size: 18px; margin: 4px 0 6px; }
+  .proof { color: var(--muted); margin: 0 0 12px; }
+  .question { font-weight: 600; margin: 4px 0 12px; }
+  .frames { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .frames.single { grid-template-columns: minmax(0, 1fr) minmax(280px, 380px); }
+  figure { margin: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg); }
+  figure img { display: block; width: 100%; height: auto; cursor: zoom-in; background: #000; }
+  figcaption { padding: 6px 10px; font-size: 13px; }
+  figcaption .role { font-weight: 600; }
+  table.vals { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.vals td { border-top: 1px solid var(--line); padding: 3px 6px; vertical-align: top; }
+  table.vals td:first-child { color: var(--muted); white-space: nowrap; width: 1%; }
+  table.vals input { margin: 0 4px 0 0; }
+  .note { font-size: 12px; color: var(--muted); padding: 6px 10px; border-top: 1px solid var(--line); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 14px; }
+  button { font: inherit; border: 1px solid var(--line); background: var(--chip); color: var(--text);
+           border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+  button.ok { background: var(--ok); border-color: var(--ok); color: #fff; }
+  button.bad { background: var(--bad); border-color: var(--bad); color: #fff; }
+  button.doubt { background: var(--doubt); border-color: var(--doubt); color: #fff; }
+  .reasons { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 10px; font-size: 13px; }
+  textarea { width: 100%; min-height: 48px; margin-top: 8px; }
+  .done { margin-top: 10px; font-size: 13px; }
+  .done.ok { color: var(--ok); } .done.faux { color: var(--bad); } .done.doute { color: var(--doubt); }
+  .help { color: var(--muted); font-size: 12px; margin-top: 12px; }
+  kbd { border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 4px; padding: 0 4px; font-size: 11px; }
+  #lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.92); display: none; overflow: auto; z-index: 10; cursor: zoom-out; }
+  #lightbox img { display: block; margin: 0 auto; }
+  @media (max-width: 760px) { .frames.single { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Validation des annotations</h1>
+  <div class="progress" id="progress"></div>
+  <select id="filter" aria-label="Filtre"></select>
+  <select id="order" aria-label="Ordre"><option value="risque">Ordre : priorité (plus risqué d'abord)</option><option value="chrono">Ordre : chronologique (session par session)</option></select>
+  <label class="toggle"><input type="checkbox" id="todoOnly" checked> seulement à faire</label>
+  <span class="chip" id="position"></span>
+</header>
+<main><div class="card" id="card">Chargement…</div></main>
+<div id="lightbox" title="Cliquer pour fermer"><img id="lightImg" alt=""></div>
+<script>
+const REASONS_FIN = ["Pas une vraie fin", "Fin placée trop tôt", "Fin placée trop tard", "Mauvais jeu ou mauvaise description",
+                     "Il manque une partie entre deux", "Ce devrait être facturé au temps"];
+const REASONS_TEMPS = ["En fait ce sont des parties à compter", "Les limites du passage sont fausses"];
+const QUESTIONS = {
+  fin: "Cette partie est-elle une vraie partie, et sa fin est-elle placée sur la bonne image (la première qui prouve la fin) ?",
+  temps: "Ce passage doit-il bien être facturé au temps (pas de fin de partie à compter) ?",
+  obs: "Les valeurs lues correspondent-elles à l'image ? Coche chaque valeur fausse.",
+  correction: "Valides-tu cette correction ? « Correct » l'accepte, « Faux » la refuse."
+};
+const KIND_NAMES = {fin: "Fins", temps: "Au temps", obs: "Observations", correction: "Corrections"};
+let items = [], results = {}, order = [], pos = 0, zoom = 1;
+
+async function load() {
+  items = (await (await fetch("/items")).json()).items;
+  results = await (await fetch("/results")).json();
+  const games = [...new Set(items.filter(i => i.kind === "obs").map(i => i.jeu))].sort();
+  const f = document.getElementById("filter");
+  f.innerHTML = `<option value="finish">À finir : sans réponse, ou « Correct » avec une case cochée</option>` +
+    `<option value="all">Tout</option><option value="flagged">À revoir : faux, douteux, ou « Correct » avec une case cochée</option><option value="fin">Fins de partie</option>` +
+    `<option value="temps">Facturé au temps</option><option value="obs">Observations (tous les jeux)</option>` +
+    (items.some(i => i.kind === "correction") ? `<option value="correction">Corrections proposées</option>` : "") +
+    games.map(g => `<option value="obs:${g}">Observations — ${g}</option>`).join("");
+  f.onchange = () => { pos = 0; rebuild(); };
+  document.getElementById("todoOnly").onchange = () => { pos = 0; rebuild(); };
+  document.getElementById("order").onchange = () => { pos = 0; rebuild(); };
+  rebuild();
+}
+
+function rebuild() {
+  const f = document.getElementById("filter").value, todo = document.getElementById("todoOnly").checked;
+  order = f === "finish" ? items.filter(i => !results[i.id] || (results[i.id].verdict === "ok" && results[i.id].champs_faux.length))
+        : f === "flagged" ? items.filter(i => results[i.id] && (results[i.id].verdict !== "ok" || results[i.id].champs_faux.length))
+        : items.filter(i => (f === "all" || i.kind === f || (f.startsWith("obs:") && i.kind === "obs" && i.jeu === f.slice(4)))
+                            && (!todo || !results[i.id]));
+  const how = document.getElementById("order").value;
+  order.sort((a, b) => how === "chrono" ? (a.session_id === b.session_id ? a.ordre_chrono.localeCompare(b.ordre_chrono)
+                                          : a.session_id.localeCompare(b.session_id)) : a.ordre_risque - b.ordre_risque);
+  pos = Math.min(pos, Math.max(order.length - 1, 0));
+  render();
+}
+
+function progress() {
+  const by = k => items.filter(i => i.kind === k), done = l => l.filter(i => results[i.id]).length;
+  const bad = items.filter(i => results[i.id] && results[i.id].verdict !== "ok").length;
+  document.getElementById("progress").innerHTML =
+    Object.keys(KIND_NAMES).filter(k => by(k).length).map(k => `<span>${KIND_NAMES[k]} : <b>${done(by(k))}</b>/${by(k).length}</span>`).join("") +
+    `<span>Signalés faux ou douteux : <b>${bad}</b></span>`;
+}
+
+const esc = s => String(s ?? "—").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+// The Raspberry Pi had no RTC battery and no network: its date is not reliable, so only session-relative time is shown.
+function sessionTime(s) {
+  s = Math.round(s ?? 0);
+  const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), r = s % 60;
+  return h ? `${h} h ${String(m).padStart(2, "0")} min` : `${m} min ${String(r).padStart(2, "0")} s`;
+}
+
+function gapText(fr, prev) {
+  if (!prev) return "";
+  const s = Math.round(fr.t_s - prev.t_s), n = fr.frame_id - prev.frame_id;
+  const dur = s >= 60 ? `${Math.floor(s / 60)} min ${s % 60} s` : `${s} s`;
+  return ` <span class="chip">${n === 1 ? "image suivante" : `${n - 1} image(s) sautée(s)`} · +${dur}</span>`;
+}
+
+function frameHtml(fr, editable, prev) {
+  const rows = Object.entries(fr.valeurs).map(([k, v]) =>
+    `<tr><td>${editable ? `<label><input type="checkbox" class="field" value="${esc(k)}">${esc(k)}</label>` : esc(k)}</td><td>${esc(v)}</td></tr>`).join("");
+  return `<figure><img src="/img/${fr.session_id}/${fr.frame_id}" alt="image ${fr.frame_id}" loading="lazy">
+    <figcaption><span class="role">${esc(fr.role)}</span> — image ${fr.frame_id}, à ${sessionTime(fr.t_session_s)} du début de la session${gapText(fr, prev)}${fr.corrigée_par ? ` <span class="chip">corrigée</span>` : ""}</figcaption>
+    <table class="vals">${rows}</table>${fr.note ? `<div class="note">${esc(fr.note)}</div>` : ""}</figure>`;
+}
+
+function render() {
+  progress();
+  const card = document.getElementById("card");
+  document.getElementById("position").textContent = order.length ? `${pos + 1} / ${order.length}` : "0 / 0";
+  if (!order.length) { card.innerHTML = "<p>Rien à faire avec ce filtre. Change de filtre ou décoche « seulement à faire ».</p>"; return; }
+  const it = order[pos], prev = results[it.id];
+  const reasons = it.kind === "fin" ? REASONS_FIN : it.kind === "temps" ? REASONS_TEMPS : [];
+  const chips = [`<span class="chip">${{fin:"Fin de partie",temps:"Facturé au temps",obs:"Observation",correction:"Correction proposée"}[it.kind]}</span>`,
+                 `<span class="chip">${esc(it.jeu)}</span>`, `<span class="chip">session ${esc(it.session_id.slice(8,14))}</span>`];
+  if (it.kind === "fin") {
+    chips.push(it["écran_de_fin_capturé"] ? `<span class="chip">écran de fin capturé</span>` : `<span class="chip risk">fin sans écran de fin (à vérifier en priorité)</span>`);
+    if (it.confiance != null) chips.push(`<span class="chip">confiance ${it.confiance}</span>`);
+  }
+  card.innerHTML = `
+    <div class="meta">${chips.join("")}</div>
+    <h2>${esc(it.titre)}</h2>
+    ${it.preuve ? `<p class="proof">Preuve proposée : ${esc(it.preuve)}${it.score_final_vu ? ` — score final vu : ${esc(it.score_final_vu)}` : ""}</p>` : ""}
+    ${it.proposition ? `<p class="proof"><b>${esc(it.groupe)}.</b> ${esc(it.proposition)} Pourquoi : ${esc(it.raison)}</p>` : ""}
+    <p class="question">${esc(it.question || QUESTIONS[it.kind])}</p>
+    ${it.frames.length > 1 ? `<p class="help" style="margin-top:0">Les images sont dans l'ordre réel de capture (gauche → droite) ; l'heure et l'écart sont indiqués sous chacune. Seules les images clés sont montrées : des images peuvent être sautées entre elles.</p>` : ""}
+    <div class="frames ${it.kind === "obs" ? "single" : ""}">${it.frames.map((fr, k) => frameHtml(fr, it.kind === "obs", it.frames[k - 1])).join("")}</div>
+    ${reasons.length ? `<div class="reasons">${reasons.map(r => `<label><input type="checkbox" class="field" value="${esc(r)}"> ${esc(r)}</label>`).join("")}</div>` : ""}
+    <textarea id="comment" placeholder="Commentaire ou correction (facultatif), ex. : le score est 2–1, la fin est à l'image 205…">${esc(prev ? prev.commentaire : "").replace(/^—$/, "")}</textarea>
+    <div class="actions">
+      <button class="ok" data-v="ok">✓ Correct <kbd>O</kbd></button>
+      <button class="bad" data-v="faux">✗ Faux <kbd>F</kbd></button>
+      <button class="doubt" data-v="doute">? Doute <kbd>D</kbd></button>
+      <button data-nav="-1">← Précédent</button>
+      <button data-nav="1">Suivant →</button>
+    </div>
+    ${prev ? `<div class="done ${prev.verdict}">Déjà répondu : ${esc(prev.verdict)}${prev.champs_faux.length ? " — " + esc(prev.champs_faux.join(", ")) : ""}</div>` : ""}
+    <p class="help">Clique sur une image pour l'agrandir (re-clic : zoom ×2, puis fermer). Raccourcis : <kbd>O</kbd> correct, <kbd>F</kbd> faux, <kbd>D</kbd> doute, <kbd>←</kbd>/<kbd>→</kbd> naviguer. Pour « Faux », coche ce qui est faux et écris la bonne valeur dans le commentaire.</p>`;
+  if (prev) card.querySelectorAll("input.field").forEach(c => { c.checked = prev.champs_faux.includes(c.value); });
+  card.querySelectorAll("button[data-v]").forEach(b => b.onclick = () => save(b.dataset.v));
+  card.querySelectorAll("button[data-nav]").forEach(b => b.onclick = () => nav(+b.dataset.nav));
+  card.querySelectorAll("figure img").forEach(img => img.onclick = () => openLight(img.src));
+}
+
+async function save(verdict) {
+  // « Correct » ne garde aucune case cochée (elles peuvent venir d'une réponse précédente).
+  const it = order[pos], fields = verdict === "ok" ? [] : [...document.querySelectorAll("input.field:checked")].map(c => c.value);
+  const comment = document.getElementById("comment").value.trim();
+  if (verdict === "faux" && it.kind !== "correction" && !fields.length && !comment) { alert("Pour « Faux », coche ce qui est faux ou écris un commentaire."); return; }
+  const r = await fetch("/save", {method: "POST", headers: {"Content-Type": "application/json"},
+                                  body: JSON.stringify({item_id: it.id, verdict, champs_faux: fields, commentaire: comment})});
+  if (!r.ok) { alert("Échec de l'enregistrement : le serveur tourne-t-il encore ?"); return; }
+  results[it.id] = {item_id: it.id, verdict, champs_faux: fields, commentaire: comment};
+  if (document.getElementById("todoOnly").checked || document.getElementById("filter").value === "finish") { order.splice(pos, 1); pos = Math.min(pos, Math.max(order.length - 1, 0)); render(); }
+  else nav(1);
+}
+
+function nav(step) { if (!order.length) return; pos = (pos + step + order.length) % order.length; render(); window.scrollTo(0, 0); }
+
+function openLight(src) {
+  const lb = document.getElementById("lightbox"), img = document.getElementById("lightImg");
+  zoom = 1; img.src = src; img.style.width = "1280px"; lb.style.display = "block";
+}
+document.getElementById("lightbox").onclick = () => {
+  const lb = document.getElementById("lightbox"), img = document.getElementById("lightImg");
+  if (zoom === 1) { zoom = 2; img.style.width = "2560px"; } else { lb.style.display = "none"; }
+};
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "TEXTAREA" || e.target.tagName === "SELECT" || (e.target.tagName === "INPUT" && e.target.type !== "checkbox")) return;
+  if (document.getElementById("lightbox").style.display === "block") { if (e.key === "Escape") document.getElementById("lightbox").style.display = "none"; return; }
+  const k = e.key.toLowerCase();
+  if (k === "o") save("ok"); else if (k === "f") save("faux"); else if (k === "d") save("doute");
+  else if (e.key === "ArrowRight") nav(1); else if (e.key === "ArrowLeft") nav(-1);
+});
+load();
+</script>
+</body>
+</html>

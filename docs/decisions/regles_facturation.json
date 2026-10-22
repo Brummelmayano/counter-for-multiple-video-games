@@ -1,0 +1,29 @@
+{
+  "version": "2026-10-05",
+  "source": "décisions de l'utilisateur (règles de comptage du 2026-09-29, règles 1 à 4 du 2026-10-02, facturation du 2026-10-05)",
+  "principe": "Le VLM décrit, le GRU détecte les fins de partie et le billing_mode ; le compteur (src/playend/counting), après le GRU, décide de ce qui compte : une partie, du temps de jeu, ou rien. Les prix sont l'affaire du produit (voir laisse_au_produit). Ces règles ne modifient ni les annotations ni les étiquettes.",
+  "billing_mode": {
+    "partie": "facturé à la partie, à chaque fin détectée, sauf relance rapide (voir ci-dessous)",
+    "temps": "facturé à la durée (missions, mondes ouverts, MK1 entraînement ∞, îles créatives Fortnite) : mesuré passage par passage, de la première à la dernière capture au temps (décision du 2026-10-05)",
+    "hors_jeu": "non facturé"
+  },
+  "relance_rapide_non_facturee": {
+    "description": "Une partie qui se termine (relance, abandon, ou fin) avant ce temps de jeu n'est pas facturée.",
+    "mesure": "temps entre la première et la dernière observation en jeu de la partie (first_frame → last_frame), décision de l'utilisateur du 2026-10-03 : une partie vue sur une seule capture compte 0 s. Cette mesure sous-estime la durée (jusqu'à un intervalle de capture, ~28 s), ce qui joue en faveur du client. L'ancienne mesure (jusqu'à l'observation qui établit la fin) faisait facturer des revanches quittées après quelques secondes (Tekken 078643 U23, Dragon Ball fe6975 U03).",
+    "seuil_secondes_par_genre": {
+      "football": 60, "basketball": 60, "tennis": 60, "racing": 60, "combat_sport": 60, "battle_royale": 60,
+      "combat": 15
+    },
+    "remarque": "combat = MK1, Tekken, Naruto, Street Fighter, Dragon Ball… dont les vrais combats durent souvent moins d'une minute ; combat_sport = UFC, boxe"
+  },
+  "ile_attente_quittee": "pas une partie (aucune fin, aucune facturation)",
+  "temps_mort": "jamais facturé (décision de l'utilisateur du 2026-10-04) : écran de mort, pause ou menu laissé figé SANS REPRISE jusqu'à l'abandon du jeu = personne ne joue → hors du time_segment, billing_mode hors_jeu. Une pause, un menu ou un écran de mort suivi d'une reprise reste facturé, même s'il dure quelques minutes.",
+  "partie_recommencee_ou_quittee": "compte comme une partie complète, sous réserve du seuil de relance rapide",
+  "match_simule": "pas une partie",
+  "partie_ouverte_au_depart_du_client": "comptée si son temps de jeu dépasse déjà le seuil de relance rapide, sinon non (décision du 2026-10-05)",
+  "trou_de_capture": {
+    "seuil_secondes": 60,
+    "regle": "un intervalle de plus de seuil_secondes entre deux captures est du temps sans image ; il reste compté avec la partie ou le passage au temps qui l'entoure, et la ligne l'indique (unseen_s) pour que l'opérateur tranche avec le client (décision du 2026-10-05). Le seuil dépasse le plus long intervalle normal de la capture (45 s)."
+  },
+  "laisse_au_produit": "décisions du 2026-10-05 appliquées par le produit, pas par le compteur : prix par genre de jeu et prix du bloc de temps, réglés par l'employé ou l'employeur ; temps au temps arrondi au bloc supérieur une seule fois par client ; temps sans image écrit sur la ligne de facture (« dont … sans image »)."
+}

@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "Si vous utilisez ce code, merci de le citer comme suit."
+type: software
+title: "Compteur intelligent multijeux vidéo : code du compteur et du jeu de données PlayEnd"
+authors:
+  - family-names: Mayano
+    given-names: Brummel D.
+    orcid: "https://orcid.org/0009-0008-5433-5259"
+    affiliation: "Université de Kinshasa"
+repository-code: "https://github.com/Brummelmayano/counter-for-multiple-video-games"
+license: CC-BY-NC-4.0
+date-released: 2026-10-22
+keywords:
+  - video games
+  - game counting
+  - Raspberry Pi
+  - vision-language models
+  - PlayEnd
+references:
+  - type: dataset
+    title: "PlayEnd: Console Play Sessions from a Kinshasa Gaming Room for End-of-Game Detection"
+    authors:
+      - family-names: Mayano
+        given-names: Brummel D.
+      - family-names: Masakuna
+        given-names: Jordan F.
+    year: 2026
+    version: "1.1"
+    publisher:
+      name: Zenodo
+    doi: 10.5281/zenodo.23159321
+  - type: article
+    title: "Intelligent Match Counter in a Video Game Arena"
+    authors:
+      - family-names: Mayano
+        given-names: Brummel D.
+      - family-names: Yan-Mol
+        given-names: Langwana L.
+      - family-names: Masakuna
+        given-names: Jordan F.
+    journal: "IEEE Access"
+    volume: 13
+    start: 32320
+    end: 32328
+    year: 2025
+    doi: 10.1109/ACCESS.2025.3542425

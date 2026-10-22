@@ -1,0 +1,341 @@
+DIAGNOSTIC_BOOT_V1
+wall_utc=2026-04-17T18:32:44Z
+boot_id=2e38c980-e283-48eb-be9a-f5fe9d287dee
+uptime=13.76 24.18
+
+Mode collecte :
+-rw-r--r-- 1 root root 100 21 sept.  2026 /etc/capture-dataset-mode
+
+Mémoire disponible et swap :
+MemTotal:         427000 kB
+MemAvailable:     290992 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+
+Contrôleurs cgroup :
+cpuset cpu io pids
+
+Stockage :
+Sys. de fichiers Taille Utilisé Dispo Uti% Monté sur
+/dev/mmcblk0p2      59G     32G   25G  57% /
+
+Interpréteur :
+Python 3.11.2
+
+=== État 1 ===
+18.27 24.77
+Result=success
+NRestarts=0
+ExecMainCode=0
+ExecMainStatus=0
+LoadState=loaded
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/capture-dataset-jeux.service
+ConditionResult=yes
+
+Sources vidéo :
+lrwxrwxrwx 1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index0 -> ../../video0
+lrwxrwxrwx 1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index1 -> ../../video1
+crw-rw---- 1 root video 81, 13 17 avril 20:32 /dev/video0
+crw-rw---- 1 root video 81, 14 17 avril 20:32 /dev/video1
+crw-rw---- 1 root video 81,  8 17 avril 20:32 /dev/video10
+crw-rw---- 1 root video 81,  9 17 avril 20:32 /dev/video11
+crw-rw---- 1 root video 81, 10 17 avril 20:32 /dev/video12
+crw-rw---- 1 root video 81,  0 17 avril 20:32 /dev/video13
+crw-rw---- 1 root video 81,  1 17 avril 20:32 /dev/video14
+crw-rw---- 1 root video 81,  2 17 avril 20:32 /dev/video15
+crw-rw---- 1 root video 81,  3 17 avril 20:32 /dev/video16
+crw-rw---- 1 root video 81, 11 17 avril 20:32 /dev/video18
+crw-rw---- 1 root video 81,  4 17 avril 20:32 /dev/video20
+crw-rw---- 1 root video 81,  5 17 avril 20:32 /dev/video21
+crw-rw---- 1 root video 81,  6 17 avril 20:32 /dev/video22
+crw-rw---- 1 root video 81,  7 17 avril 20:32 /dev/video23
+crw-rw---- 1 root video 81, 12 17 avril 20:32 /dev/video31
+
+Fichiers créés :
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/metadata.json
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/status.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/metadata.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/status.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/metadata.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/status.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/metadata.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/status.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/metadata.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/status.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/metadata.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/status.json
+dataset/session_078643a449d74a909eac3ee82c54079f/metadata.json
+dataset/session_078643a449d74a909eac3ee82c54079f/status.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/metadata.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/status.json
+
+Dernières traces du collecteur :
+
+=== État 2 ===
+42.41 41.80
+Result=success
+NRestarts=0
+ExecMainCode=0
+ExecMainStatus=0
+LoadState=loaded
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/capture-dataset-jeux.service
+ConditionResult=yes
+
+Sources vidéo :
+lrwxrwxrwx 1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index0 -> ../../video0
+lrwxrwxrwx 1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index1 -> ../../video1
+crw-rw---- 1 root video 81, 13 17 avril 20:32 /dev/video0
+crw-rw---- 1 root video 81, 14 17 avril 20:32 /dev/video1
+crw-rw---- 1 root video 81,  8 17 avril 20:32 /dev/video10
+crw-rw---- 1 root video 81,  9 17 avril 20:32 /dev/video11
+crw-rw---- 1 root video 81, 10 17 avril 20:32 /dev/video12
+crw-rw---- 1 root video 81,  0 17 avril 20:32 /dev/video13
+crw-rw---- 1 root video 81,  1 17 avril 20:32 /dev/video14
+crw-rw---- 1 root video 81,  2 17 avril 20:32 /dev/video15
+crw-rw---- 1 root video 81,  3 17 avril 20:32 /dev/video16
+crw-rw---- 1 root video 81, 11 17 avril 20:32 /dev/video18
+crw-rw---- 1 root video 81,  4 17 avril 20:32 /dev/video20
+crw-rw---- 1 root video 81,  5 17 avril 20:32 /dev/video21
+crw-rw---- 1 root video 81,  6 17 avril 20:32 /dev/video22
+crw-rw---- 1 root video 81,  7 17 avril 20:32 /dev/video23
+crw-rw---- 1 root video 81, 12 17 avril 20:32 /dev/video31
+
+Fichiers créés :
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/metadata.json
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/status.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/metadata.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/status.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/metadata.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/status.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/metadata.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/status.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/metadata.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/status.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/metadata.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/status.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/metadata.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/status.json
+dataset/session_078643a449d74a909eac3ee82c54079f/metadata.json
+dataset/session_078643a449d74a909eac3ee82c54079f/status.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/metadata.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/status.json
+
+Dernières traces du collecteur :
+
+=== État 3 ===
+65.08 54.92
+Result=success
+NRestarts=0
+ExecMainCode=0
+ExecMainStatus=0
+LoadState=loaded
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/capture-dataset-jeux.service
+ConditionResult=yes
+
+Sources vidéo :
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index0 -> ../../video0
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index1 -> ../../video1
+crw-rw----+ 1 root video 81, 13 17 avril 20:32 /dev/video0
+crw-rw----+ 1 root video 81, 14 17 avril 20:32 /dev/video1
+crw-rw----+ 1 root video 81,  8 17 avril 20:32 /dev/video10
+crw-rw----+ 1 root video 81,  9 17 avril 20:32 /dev/video11
+crw-rw----+ 1 root video 81, 10 17 avril 20:32 /dev/video12
+crw-rw----+ 1 root video 81,  0 17 avril 20:32 /dev/video13
+crw-rw----+ 1 root video 81,  1 17 avril 20:32 /dev/video14
+crw-rw----+ 1 root video 81,  2 17 avril 20:32 /dev/video15
+crw-rw----+ 1 root video 81,  3 17 avril 20:32 /dev/video16
+crw-rw----+ 1 root video 81, 11 17 avril 20:32 /dev/video18
+crw-rw----+ 1 root video 81,  4 17 avril 20:32 /dev/video20
+crw-rw----+ 1 root video 81,  5 17 avril 20:32 /dev/video21
+crw-rw----+ 1 root video 81,  6 17 avril 20:32 /dev/video22
+crw-rw----+ 1 root video 81,  7 17 avril 20:32 /dev/video23
+crw-rw----+ 1 root video 81, 12 17 avril 20:32 /dev/video31
+
+Fichiers créés :
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/metadata.json
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/status.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/metadata.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/status.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/metadata.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/status.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/metadata.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/status.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/metadata.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/status.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/metadata.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/status.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/metadata.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/status.json
+dataset/session_078643a449d74a909eac3ee82c54079f/metadata.json
+dataset/session_078643a449d74a909eac3ee82c54079f/status.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/metadata.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/status.json
+
+Dernières traces du collecteur :
+
+=== État 4 ===
+89.50 70.47
+Result=success
+NRestarts=0
+ExecMainCode=0
+ExecMainStatus=0
+LoadState=loaded
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/capture-dataset-jeux.service
+ConditionResult=yes
+
+Sources vidéo :
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index0 -> ../../video0
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index1 -> ../../video1
+crw-rw----+ 1 root video 81, 13 17 avril 20:32 /dev/video0
+crw-rw----+ 1 root video 81, 14 17 avril 20:32 /dev/video1
+crw-rw----+ 1 root video 81,  8 17 avril 20:32 /dev/video10
+crw-rw----+ 1 root video 81,  9 17 avril 20:32 /dev/video11
+crw-rw----+ 1 root video 81, 10 17 avril 20:32 /dev/video12
+crw-rw----+ 1 root video 81,  0 17 avril 20:32 /dev/video13
+crw-rw----+ 1 root video 81,  1 17 avril 20:32 /dev/video14
+crw-rw----+ 1 root video 81,  2 17 avril 20:32 /dev/video15
+crw-rw----+ 1 root video 81,  3 17 avril 20:32 /dev/video16
+crw-rw----+ 1 root video 81, 11 17 avril 20:32 /dev/video18
+crw-rw----+ 1 root video 81,  4 17 avril 20:32 /dev/video20
+crw-rw----+ 1 root video 81,  5 17 avril 20:32 /dev/video21
+crw-rw----+ 1 root video 81,  6 17 avril 20:32 /dev/video22
+crw-rw----+ 1 root video 81,  7 17 avril 20:32 /dev/video23
+crw-rw----+ 1 root video 81, 12 17 avril 20:32 /dev/video31
+
+Fichiers créés :
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/metadata.json
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/status.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/metadata.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/status.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/metadata.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/status.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/metadata.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/status.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/metadata.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/status.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/metadata.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/status.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/metadata.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/status.json
+dataset/session_078643a449d74a909eac3ee82c54079f/metadata.json
+dataset/session_078643a449d74a909eac3ee82c54079f/status.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/metadata.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/status.json
+
+Dernières traces du collecteur :
+
+=== État 5 ===
+112.30 99.21
+Result=success
+NRestarts=0
+ExecMainCode=0
+ExecMainStatus=0
+LoadState=loaded
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/capture-dataset-jeux.service
+ConditionResult=yes
+
+Sources vidéo :
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index0 -> ../../video0
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index1 -> ../../video1
+crw-rw----+ 1 root video 81, 13 17 avril 20:32 /dev/video0
+crw-rw----+ 1 root video 81, 14 17 avril 20:32 /dev/video1
+crw-rw----+ 1 root video 81,  8 17 avril 20:32 /dev/video10
+crw-rw----+ 1 root video 81,  9 17 avril 20:32 /dev/video11
+crw-rw----+ 1 root video 81, 10 17 avril 20:32 /dev/video12
+crw-rw----+ 1 root video 81,  0 17 avril 20:32 /dev/video13
+crw-rw----+ 1 root video 81,  1 17 avril 20:32 /dev/video14
+crw-rw----+ 1 root video 81,  2 17 avril 20:32 /dev/video15
+crw-rw----+ 1 root video 81,  3 17 avril 20:32 /dev/video16
+crw-rw----+ 1 root video 81, 11 17 avril 20:32 /dev/video18
+crw-rw----+ 1 root video 81,  4 17 avril 20:32 /dev/video20
+crw-rw----+ 1 root video 81,  5 17 avril 20:32 /dev/video21
+crw-rw----+ 1 root video 81,  6 17 avril 20:32 /dev/video22
+crw-rw----+ 1 root video 81,  7 17 avril 20:32 /dev/video23
+crw-rw----+ 1 root video 81, 12 17 avril 20:32 /dev/video31
+
+Fichiers créés :
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/metadata.json
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/status.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/metadata.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/status.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/metadata.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/status.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/metadata.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/status.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/metadata.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/status.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/metadata.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/status.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/metadata.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/status.json
+dataset/session_078643a449d74a909eac3ee82c54079f/metadata.json
+dataset/session_078643a449d74a909eac3ee82c54079f/status.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/metadata.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/status.json
+
+Dernières traces du collecteur :
+
+=== État 6 ===
+133.99 140.43
+Result=success
+NRestarts=0
+ExecMainCode=0
+ExecMainStatus=0
+LoadState=loaded
+ActiveState=active
+SubState=running
+FragmentPath=/etc/systemd/system/capture-dataset-jeux.service
+ConditionResult=yes
+
+Sources vidéo :
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index0 -> ../../video0
+lrwxrwxrwx  1 root root      12 17 avril 20:32 /dev/v4l/by-id/usb-MACROSILICON_2109-video-index1 -> ../../video1
+crw-rw----+ 1 root video 81, 13 17 avril 20:32 /dev/video0
+crw-rw----+ 1 root video 81, 14 17 avril 20:32 /dev/video1
+crw-rw----+ 1 root video 81,  8 17 avril 20:32 /dev/video10
+crw-rw----+ 1 root video 81,  9 17 avril 20:32 /dev/video11
+crw-rw----+ 1 root video 81, 10 17 avril 20:32 /dev/video12
+crw-rw----+ 1 root video 81,  0 17 avril 20:32 /dev/video13
+crw-rw----+ 1 root video 81,  1 17 avril 20:32 /dev/video14
+crw-rw----+ 1 root video 81,  2 17 avril 20:32 /dev/video15
+crw-rw----+ 1 root video 81,  3 17 avril 20:32 /dev/video16
+crw-rw----+ 1 root video 81, 11 17 avril 20:32 /dev/video18
+crw-rw----+ 1 root video 81,  4 17 avril 20:32 /dev/video20
+crw-rw----+ 1 root video 81,  5 17 avril 20:32 /dev/video21
+crw-rw----+ 1 root video 81,  6 17 avril 20:32 /dev/video22
+crw-rw----+ 1 root video 81,  7 17 avril 20:32 /dev/video23
+crw-rw----+ 1 root video 81, 12 17 avril 20:32 /dev/video31
+
+Fichiers créés :
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/metadata.json
+dataset/session_ccfc6589f8544d7fa6b59351b2f06db9/status.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/metadata.json
+dataset/session_da79d42054db4e03a32bd5aafda8104b/status.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/metadata.json
+dataset/session_d8b709c4fce048cebc352d4b94262a93/status.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/metadata.json
+dataset/session_799ac295e0d044839beac8c3badd7d97/status.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/metadata.json
+dataset/session_a4e41f30a5184a47b80897722ac20d5e/status.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/metadata.json
+dataset/session_9e0e6a4f9955452db82fb7212bc4bf89/status.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/metadata.json
+dataset/session_ff1c7245efc04fdb8acf61d38b8aaa24/status.json
+dataset/session_078643a449d74a909eac3ee82c54079f/metadata.json
+dataset/session_078643a449d74a909eac3ee82c54079f/status.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/metadata.json
+dataset/session_7616a3a54b7649d182933c76ac4afedd/status.json
+
+Dernières traces du collecteur :
+
+DIAGNOSTIC_TERMINE

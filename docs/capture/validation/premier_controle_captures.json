@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-09-21T18:14:38.472689+00:00",
+  "source": "SD card mounted on PC",
+  "sessions": 0,
+  "jpeg_files": 0,
+  "capture_lock_exists": false,
+  "collector_journal_entries": 0,
+  "conclusion": "No saved captures found; cause of absent collector start not established."
+}

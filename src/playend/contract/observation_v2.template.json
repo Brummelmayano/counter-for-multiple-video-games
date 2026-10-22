@@ -1,0 +1,54 @@
+{
+  "schema_version": "2.1",
+  "game": {
+    "title": null,
+    "type": "unknown",
+    "mode": null,
+    "mode_duration": "unknown",
+    "confidence": null
+  },
+  "state": {
+    "phase": "unknown",
+    "screen_type": "unknown",
+    "confidence": null
+  },
+  "participants": {
+    "primary": [],
+    "count_visible": null
+  },
+  "score": {
+    "a": null,
+    "b": null,
+    "type": null,
+    "additional_scores": null
+  },
+  "clock": {
+    "visible": null,
+    "display": null,
+    "value_seconds": null,
+    "direction": null
+  },
+  "period": {
+    "type": "unknown",
+    "number": null,
+    "total": null
+  },
+  "progress": {
+    "type": null,
+    "current": null,
+    "total": null
+  },
+  "position": {
+    "current": null,
+    "total": null
+  },
+  "result": {
+    "visible": null,
+    "winner": null,
+    "outcome_type": null
+  },
+  "visible_entities": [],
+  "observation_confidence": null,
+  "secondary_timers": null,
+  "secondary_counters": null
+}

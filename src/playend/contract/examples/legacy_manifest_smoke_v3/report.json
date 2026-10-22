@@ -1,0 +1,10 @@
+{
+  "rows": 4,
+  "sessions": 1,
+  "eligible_labelled_intervals": 0,
+  "legacy_clocks_masked": 4,
+  "manifest_sha256": "00de813fc0a715d2733fa71a5acc040dc9826058ddd3db646fd3a0a0acc5201a",
+  "labels_sha256": null,
+  "status": "features_only_no_training",
+  "feature_version": "3.0"
+}

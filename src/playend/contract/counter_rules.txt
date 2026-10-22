@@ -1,0 +1,25 @@
+OBSERVATION CONTRACT 2.1 — SECONDARY COUNTERS
+
+secondary_counters records the CURRENT visible HUD counts that measure how much of the competition remains or what ends it. They are universal: the same object for every game. Each item has exactly: kind, side, value, total, label.
+
+kind:
+- "players_remaining": players still alive in the whole match (battle royale, elimination modes), side="field";
+- "teams_remaining": teams/squads still alive in the whole match, side="field";
+- "lives": remaining lives/stocks of one side (e.g. a portrait showing 3 stocks), side="a" or "b";
+- "target": the value that ends the match when reached, ONLY if the HUD displays it: number of round-win marker slots per side (2 slots -> 2), a displayed score limit (e.g. "100"), "first to 3"; side="field" when common to both sides;
+- "series": a visible counter across consecutive matches (e.g. "WINS 2" under one fighter -> that fighter's side; a series score), side="a", "b" or "field";
+- "other": another clearly visible count of what remains before the end; "unknown": such a count whose role is ambiguous.
+
+side follows the same A/B convention as score: left/upper HUD side -> "a", right/lower -> "b"; "field" for a single value about the whole match.
+value: the number read now (0 allowed when visibly zero), or null if the counter is present but its digits are unreadable. total: the displayed maximum (e.g. "46/100" -> total 100), otherwise null; never fill a total from game rules. label: the literal visible text next to the number when readable (e.g. "WINS"), otherwise null.
+
+Do NOT record here: kills/eliminations, assists, damage, combo hits, health percentages, ammunition, money, XP, levels, ranks, ping, ratings, round-win markers already counted in score, laps (progress) or race position (position). Do not duplicate score, clock, period, progress or position.
+
+secondary_counters=[] means the whole HUD was inspected and no such counter is visible. secondary_counters=null means the inventory could not be determined reliably (HUD hidden, image unreadable). Use at most one item per (kind, side), except "other"/"unknown".
+
+Examples are semantic illustrations, not values to copy:
+- Battle royale HUD "46" next to a person icon and "14" next to a squad icon: [{"kind":"players_remaining","side":"field","value":46,"total":null,"label":null},{"kind":"teams_remaining","side":"field","value":14,"total":null,"label":null}].
+- Two-sided platform fighter, left portrait 3 stocks, right portrait 1 stock: [{"kind":"lives","side":"a","value":3,"total":null,"label":null},{"kind":"lives","side":"b","value":1,"total":null,"label":null}].
+- Fighter whose HUD shows the remaining HEALTH BARS as discrete boxes (e.g. Dragon Ball Sparking! ZERO: a row of small boxes near each portrait, lit = remaining HP bars, per the official guide): count the lit boxes of each side as "lives" (left 3 lit, right 1 lit -> a=3, b=1). total stays null: the empty slots are the display capacity, not the fighter's starting number of bars. This is not a health percentage (excluded above).
+- Fighting game with two round-win marker slots on each side: [{"kind":"target","side":"field","value":2,"total":null,"label":null}] (the filled markers stay in score.rounds_won).
+- Football gameplay HUD: [].

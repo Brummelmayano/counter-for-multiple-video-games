@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-09-21T18:19:13.141335+00:00",
+  "collector_sessions": 0,
+  "collector_lock_exists": false,
+  "last_persisted_boot_id": "7fbbe1898e2e44b0ae12d874124eb6ac",
+  "journal_integrity_check": "PASS system.journal",
+  "root_partuuid": "87888ac5-02",
+  "cause": "not established",
+  "logs": {
+    "user-1000.journal": {
+      "size": 8388608,
+      "mtime_ns": 1776385788629797950
+    },
+    "system.journal": {
+      "size": 8388608,
+      "mtime_ns": 1776385022135999999
+    }
+  }
+}

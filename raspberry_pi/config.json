@@ -1,0 +1,12 @@
+{
+  "interval_min_s": 10.0,
+  "interval_max_s": 45.0,
+  "width": 1280,
+  "height": 720,
+  "jpeg_quality": 90,
+  "device": "auto",
+  "reserve_free_gib": 5.0,
+  "request_timeout_s": 20.0,
+  "retry_s": 5.0,
+  "dataset_directory": "dataset"
+}

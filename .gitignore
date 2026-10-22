@@ -1,0 +1,13 @@
+# Environnements Python locaux
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Paquet PlayEnd téléchargé de Zenodo, sorties des commandes, poids de modèles retéléchargeables
+build/
+*.gguf
+
+# Données de travail (captures, annotations) : elles ne sont pas publiées, voir le README
+data/

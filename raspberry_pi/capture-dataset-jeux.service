@@ -1,0 +1,36 @@
+[Unit]
+Description=Collecte des images de gameplay (intervalles simules 10-45 s)
+After=local-fs.target
+ConditionPathExists=/etc/capture-dataset-mode
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=brummel
+Group=brummel
+SupplementaryGroups=video
+WorkingDirectory=/home/brummel/Desktop/Capture-dataset-jeux
+ExecStart=/usr/bin/python3 -u /home/brummel/Desktop/Capture-dataset-jeux/capture.py
+Restart=on-failure
+RestartSec=15
+TimeoutStopSec=10
+KillMode=control-group
+UMask=0022
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/brummel/Desktop/Capture-dataset-jeux
+PrivateTmp=true
+MemoryMax=180M
+TasksMax=32
+StandardOutput=journal
+StandardError=journal
+LogRateLimitIntervalSec=60
+LogRateLimitBurst=20
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,128 @@
+{
+ "examples": 1273,
+ "correct": 0.916325771662328,
+ "wrong": 0.02900706582372629,
+ "missed": 0.054667162513945704,
+ "extra": 83,
+ "screens_without_hud": 271,
+ "screens_without_hud_with_invented_values": 1,
+ "median_wall_s": 1.771,
+ "by_field": {
+  "Beach Buggy Racing 2 / progress_current": {
+   "correct": 33
+  },
+  "Call of Duty: Warzone / period_number": {
+   "extra": 28,
+   "correct": 3
+  },
+  "Call of Duty: Warzone / players_remaining": {
+   "correct": 37,
+   "wrong": 2
+  },
+  "Call of Duty: Warzone / teams_remaining": {
+   "correct": 38,
+   "missed": 1
+  },
+  "Dragon Ball Sparking! ZERO / lives_a": {
+   "correct": 1
+  },
+  "Dragon Ball Sparking! ZERO / lives_b": {
+   "wrong": 1
+  },
+  "EA Sports FC / clock_display": {
+   "correct": 376,
+   "missed": 2,
+   "wrong": 1
+  },
+  "EA Sports FC / participant_a": {
+   "correct": 333,
+   "missed": 41,
+   "wrong": 2
+  },
+  "EA Sports FC / participant_b": {
+   "correct": 335,
+   "missed": 41
+  },
+  "EA Sports FC / score_a": {
+   "correct": 369,
+   "extra": 4,
+   "missed": 22,
+   "wrong": 5
+  },
+  "EA Sports FC / score_b": {
+   "correct": 373,
+   "extra": 4,
+   "missed": 22,
+   "wrong": 1
+  },
+  "EA Sports UFC 5 / clock_display": {
+   "wrong": 1,
+   "correct": 5
+  },
+  "EA Sports UFC 5 / participant_a": {
+   "correct": 5,
+   "wrong": 1
+  },
+  "EA Sports UFC 5 / participant_b": {
+   "correct": 6
+  },
+  "EA Sports UFC 5 / period_number": {
+   "missed": 1,
+   "correct": 5
+  },
+  "Fortnite / players_remaining": {
+   "correct": 134,
+   "missed": 7,
+   "wrong": 2,
+   "extra": 34
+  },
+  "J-Stars Victory VS+ / clock_display": {
+   "correct": 12,
+   "wrong": 14,
+   "missed": 1
+  },
+  "J-Stars Victory VS+ / participant_a": {
+   "correct": 13,
+   "wrong": 16
+  },
+  "Mortal Kombat 1 / clock_display": {
+   "correct": 245,
+   "missed": 2,
+   "extra": 5,
+   "wrong": 1
+  },
+  "Mortal Kombat 1 / score_a": {
+   "correct": 31,
+   "missed": 1,
+   "extra": 4
+  },
+  "Mortal Kombat 1 / score_b": {
+   "correct": 29,
+   "missed": 1,
+   "extra": 4,
+   "wrong": 2
+  },
+  "Naruto Storm Connections / clock_display": {
+   "correct": 23
+  },
+  "Naruto Storm Connections / participant_a": {
+   "wrong": 15,
+   "correct": 6,
+   "missed": 2
+  },
+  "Naruto Storm Connections / participant_b": {
+   "wrong": 9,
+   "correct": 12,
+   "missed": 2
+  },
+  "Naruto Storm Connections / score_a": {
+   "correct": 22,
+   "wrong": 1
+  },
+  "Naruto Storm Connections / score_b": {
+   "correct": 18,
+   "wrong": 4,
+   "missed": 1
+  }
+ }
+}

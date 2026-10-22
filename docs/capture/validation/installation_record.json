@@ -1,0 +1,61 @@
+{
+  "installed_epoch": 1790010855.2711737,
+  "root_uuid": "4aa56689-dcb4-4759-90e6-179beae559ac",
+  "original_hashes": {
+    "etc/fstab": "87b0c7208b4f0b3ea8375145967b00cddfb960d443f63969e4f136e50a869bd4",
+    "etc/rc.local": "4bd10f91f15d035c3370e91e384fe4cb55d3c880c1dc6b11cd46afe4cf42ef92",
+    "etc/os-release": "59a77b5f2666d9c85c489bd1911a6eebbd91ef22fe48b90a3b75f1b21f3844d4",
+    "etc/systemd/system/compteur-boot.service": "82258b0df5f5040443542fb8f0523cf83fa950b67b125700d11d1008326c8fe1",
+    "etc/systemd/system/compteur-cluster.service": "18ff2860464bd8fe9ae45e5cb286a1552450704fc2acdfaa85eed57cc103ed26",
+    "etc/systemd/system/compteur.service": "a2e7a27a1a0dbf5a725283c74ebd7a61d3d5e3af60145116f9cc98722810b105"
+  },
+  "previous_boot_links": {
+    "cups-browsed.service": "/lib/systemd/system/cups-browsed.service",
+    "compteur-cluster.service": "/etc/systemd/system/compteur-cluster.service",
+    "ufw.service": "/lib/systemd/system/ufw.service",
+    "rpi-eeprom-update.service": "/lib/systemd/system/rpi-eeprom-update.service",
+    "dphys-swapfile.service": "/lib/systemd/system/dphys-swapfile.service",
+    "triggerhappy.service": "/lib/systemd/system/triggerhappy.service",
+    "e2scrub_reap.service": "/lib/systemd/system/e2scrub_reap.service",
+    "wpa_supplicant.service": "/lib/systemd/system/wpa_supplicant.service",
+    "console-setup.service": "/lib/systemd/system/console-setup.service",
+    "networking.service": "/lib/systemd/system/networking.service",
+    "sshswitch.service": "/lib/systemd/system/sshswitch.service",
+    "cups.service": "/lib/systemd/system/cups.service",
+    "avahi-daemon.service": "/lib/systemd/system/avahi-daemon.service",
+    "compteur-boot.service": "/etc/systemd/system/compteur-boot.service",
+    "cron.service": "/lib/systemd/system/cron.service",
+    "cups.path": "/lib/systemd/system/cups.path",
+    "NetworkManager.service": "/lib/systemd/system/NetworkManager.service",
+    "ssh.service": "/lib/systemd/system/ssh.service",
+    "ModemManager.service": "/lib/systemd/system/ModemManager.service",
+    "pigpiod.service": "/lib/systemd/system/pigpiod.service",
+    "rp1-test.service": "/lib/systemd/system/rp1-test.service",
+    "nfs-client.target": "/lib/systemd/system/nfs-client.target",
+    "remote-fs.target": "/lib/systemd/system/remote-fs.target",
+    "glamor-test.service": "/lib/systemd/system/glamor-test.service"
+  },
+  "project_manifest": {
+    "files": {
+      "verify_dataset.py": "1ca9be27c1f13a9bdbbd717156bf3985c587a6b1fc667a979f2d85a295ee7da5",
+      "config.json": "f0bab2767f01fee4b667674f1a70473445f79cda99ec50dd6c87171bfa85caa6",
+      "mode.py": "6959f0592a0022e3c6621a5124363186fc7a153b5f537de9daf9bd2449f7ae16",
+      "README.md": "da9033d3781205d13d5a9831998a2c8c2bf341223512dd3fd43c83275b6625bc",
+      "capture.py": "db00e400d932915b5ff7d10e1726dcef3098b817440f20ae3e9d34d1144c21f1",
+      "capture-dataset-jeux.service": "0518380019d4568ea0535c25edec32fb8cb73b64d4ad6135346b7e83ed74d12f",
+      "tests/test_process.py": "1c30f59271eb8c0cdf30927d72259fb940e3df448f95df55028928d0a903262e",
+      "tests/test_capture.py": "542562b463d549e1da6937ca047d4527e3223c019d373789584fbf2a5644debd"
+    },
+    "interval_min_s": 10,
+    "interval_max_s": 45,
+    "status": "software_verified_hardware_pending"
+  },
+  "added_files": [
+    "etc/systemd/system/capture-dataset-jeux.service",
+    "etc/systemd/system/multi-user.target.wants/capture-dataset-jeux.service",
+    "etc/systemd/system/compteur-boot.service.d/90-capture-dataset.conf",
+    "etc/systemd/system/compteur.service.d/90-capture-dataset.conf",
+    "etc/capture-dataset-mode"
+  ],
+  "status": "installed_offline_hardware_test_pending"
+}

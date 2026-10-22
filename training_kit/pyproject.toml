@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "playend-training"
+version = "1.0"
+description = "Training and evaluation of the end-of-game detectors on the PlayEnd dataset."
+requires-python = ">=3.10"
+# launch.py installs PyTorch first, in the build that matches the graphics card.
+dependencies = [
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+    "scikit-learn>=1.7",
+    "scipy>=1.10",
+    "threadpoolctl>=3",
+    "torch>=2.1",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

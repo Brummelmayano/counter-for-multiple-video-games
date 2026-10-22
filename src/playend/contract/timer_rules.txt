@@ -1,0 +1,21 @@
+OBSERVATION CONTRACT 2.1 — TIMER RULES
+
+Inspect the complete original image. Identify a timer's role from its label, icon and surrounding UI before reading its digits. Screen position or game genre alone is not proof.
+
+clock is ONLY the current main match, sporting period/round, race or mission timer. Never use goal/scorer minutes, substitution/card times, historical/replay times, system time, total playtime or video-player time. Never reconstruct current match time from a goal minute or score.
+
+For an identifiable main timer: visible=true, preserve the exact readable display; if unreadable, display=value_seconds=null. If no main timer is visible: visible=false, display=value_seconds=direction=null. If the role of a possible main timer is uncertain: visible=null, display=value_seconds=direction=null. For any identifiable main timer use direction="unknown": a single still cannot establish movement.
+
+secondary_timers retains other CURRENT gameplay timers independently of clock. Each item is a visibly present timer with exactly: kind, label, display, value_seconds, direction. Use kind="storm_phase", "contract", "respawn", "ability_cooldown", "pre_match", "other" (clearly secondary but another role), or "unknown" (it is a current gameplay timer but its role is ambiguous). A possible main timer with ambiguous role belongs here as unknown, while clock.visible=null. Historical event minutes and system time never belong here. Use the literal visible label when readable, otherwise label=null; do not invent a label from an icon. Preserve separate items for multiple visible timers, even of the same kind. Do not duplicate the main clock here. Record a timer with unreadable digits using display=value_seconds=null. Use direction="unknown" for every item. Never infer resets or phase changes from one image.
+
+secondary_timers=[] means the whole image was inspected and no secondary/ambiguous current gameplay timer was found. secondary_timers=null means the inventory could not be determined reliably or was not reviewed. A nonempty array lists all identified visible secondary/ambiguous timers; keep unknown roles and unreadable digits instead of dropping those timers. Do not use [] for uncertainty.
+
+For BOTH main and secondary timers: preserve exact display text. Convert an unambiguous mm:ss or h:mm:ss (optionally fractional seconds after a dot) to value_seconds. A bare number may be converted ONLY if the UI clearly indicates seconds, such as a fighting-round timer. Minute-only live 8' or compound 90+3' must keep value_seconds=null; they do not provide exact seconds. Other unsupported/uncertain units or formats also keep value_seconds=null.
+
+Examples are semantic illustrations, not values to copy:
+- Scorer portrait 8', no current main timer: clock.visible=false, all other clock fields null. Do not put the goal minute in secondary_timers.
+- Scorer 8' plus current scoreboard 08:42: clock.display="08:42", value_seconds=522, visible=true, direction="unknown".
+- Only a storm timer 0:44: clock.visible=false, other clock fields null; secondary_timers contains {"kind":"storm_phase","label":null,"display":"0:44","value_seconds":44,"direction":"unknown"} if no label is readable.
+- Storm timer 0:00 still is a storm timer. It does not establish victory, defeat, end of match or start of a new match. Extract result only from separate explicit visible evidence.
+
+Never output boundary, unit_end_boundary, ended_unit_count, clock_reset or any temporal label. Set schema_version="2.1". Return exactly the required JSON.

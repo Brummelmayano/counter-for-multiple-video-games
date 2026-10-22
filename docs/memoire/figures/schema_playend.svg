@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1079" width="1000" height="1079">
+<rect width="1000" height="1079" fill="#fff"/>
+<path d="M 225 134 L 225 210" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="215" y="156" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1</text>
+<text x="215" y="202" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1</text>
+<text x="237" y="178.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">affectée à</text>
+<path d="M 225 444 L 225 500" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="215" y="464" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1</text>
+<text x="215" y="492" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">0..*</text>
+<text x="237" y="478" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">contient</text>
+<path d="M 410 250 L 470 250 L 470 100 L 590 100" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="420" y="243" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">1</text>
+<text x="582" y="122" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">0..*</text>
+<text x="530" y="92" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="italic" text-anchor="middle" fill="#000">contient</text>
+<path d="M 410 347.0 L 590 347.0" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="420" y="339.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">1</text>
+<text x="582" y="339.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1..*</text>
+<text x="500" y="339.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="italic" text-anchor="middle" fill="#000">contient</text>
+<path d="M 410 581.0 L 590 581.0" fill="none" stroke="#000" stroke-width="1.6"/>
+<path d="M 410 607.0 L 590 607.0" fill="none" stroke="#000" stroke-width="1.6"/>
+<path d="M 410 633.0 L 590 633.0" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="420" y="576" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">0..1</text>
+<text x="582" y="576" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1..*</text>
+<text x="500" y="576" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="middle" fill="#000">regroupe</text>
+<text x="420" y="602" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">0..1</text>
+<text x="582" y="602" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">0..1</text>
+<text x="500" y="602" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="middle" fill="#000">fin prouvée par</text>
+<text x="420" y="628" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">0..1</text>
+<text x="582" y="628" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1</text>
+<text x="500" y="628" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" font-style="italic" text-anchor="middle" fill="#000">début posé sur</text>
+<path d="M 775 212 L 775 290" fill="none" stroke="#000" stroke-width="1.6" stroke-dasharray="9 6"/>
+<text x="765" y="234" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">0..1</text>
+<text x="765" y="282" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1..*</text>
+<text x="787" y="257.0" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">couvre (plage)</text>
+<path d="M 775 758 L 775 842" fill="none" stroke="#000" stroke-width="1.6"/>
+<text x="765" y="780" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1</text>
+<text x="765" y="834" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="end" fill="#000">1</text>
+<text x="787" y="806" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="italic" text-anchor="start" fill="#000">encodée dans</text>
+<rect x="40" y="30" width="370" height="104" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<line x1="40" y1="66" x2="410" y2="66" stroke="#000" stroke-width="1.2"/>
+<text x="54" y="54" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">splits.csv</text>
+<text x="54" y="93" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">session_id</text>
+<text x="396" y="93" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK, FK</text>
+<text x="54" y="119" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">fold</text>
+<rect x="40" y="210" width="370" height="234" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<line x1="40" y1="246" x2="410" y2="246" stroke="#000" stroke-width="1.2"/>
+<text x="54" y="234" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">sessions.csv</text>
+<text x="54" y="273" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">session_id</text>
+<text x="396" y="273" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK</text>
+<text x="54" y="299" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">duration_s</text>
+<text x="54" y="325" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">frame_count</text>
+<text x="54" y="351" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">boundary_count</text>
+<text x="54" y="377" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">start_count</text>
+<text x="54" y="403" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">games</text>
+<text x="54" y="429" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">validation_status</text>
+<rect x="40" y="500" width="370" height="312" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<line x1="40" y1="536" x2="410" y2="536" stroke="#000" stroke-width="1.2"/>
+<text x="54" y="524" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">units.csv</text>
+<text x="54" y="563" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">session_id</text>
+<text x="396" y="563" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK, FK</text>
+<text x="54" y="589" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">unit_id</text>
+<text x="396" y="589" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK</text>
+<text x="54" y="615" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">game</text>
+<text x="54" y="641" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">first_frame</text>
+<text x="54" y="667" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">last_frame</text>
+<text x="54" y="693" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">start_established_at</text>
+<text x="54" y="719" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">end_established_at</text>
+<text x="54" y="745" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">termination</text>
+<text x="54" y="771" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">final_score_seen</text>
+<text x="54" y="797" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">…</text>
+<rect x="590" y="30" width="370" height="182" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<line x1="590" y1="66" x2="960" y2="66" stroke="#000" stroke-width="1.2"/>
+<text x="604" y="54" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">time_segments.csv</text>
+<text x="604" y="93" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">session_id</text>
+<text x="946" y="93" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK, FK</text>
+<text x="604" y="119" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">first_frame</text>
+<text x="946" y="119" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK</text>
+<text x="604" y="145" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">last_frame</text>
+<text x="604" y="171" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">game</text>
+<text x="604" y="197" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">reason</text>
+<rect x="590" y="290" width="370" height="468" fill="#fff" stroke="#000" stroke-width="1.6"/>
+<line x1="590" y1="326" x2="960" y2="326" stroke="#000" stroke-width="1.2"/>
+<text x="604" y="314" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">observations.csv</text>
+<text x="604" y="353" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">session_id</text>
+<text x="946" y="353" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK, FK</text>
+<text x="604" y="379" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">frame_id</text>
+<text x="946" y="379" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK</text>
+<text x="604" y="405" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">t_s, delta_t_s</text>
+<text x="604" y="431" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">game_family, phase</text>
+<text x="604" y="457" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">score_a, score_b</text>
+<text x="604" y="483" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">clock_display</text>
+<text x="604" y="509" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">period_type</text>
+<text x="604" y="535" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">players_remaining</text>
+<text x="604" y="561" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">lives_a, lives_b</text>
+<text x="604" y="587" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">current_unit_id</text>
+<text x="946" y="587" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">FK</text>
+<text x="604" y="613" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">ended_unit_id</text>
+<text x="946" y="613" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">FK</text>
+<text x="604" y="639" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">started_unit_id</text>
+<text x="946" y="639" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">FK</text>
+<text x="604" y="665" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">unit_end_boundary</text>
+<text x="604" y="691" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">unit_start_boundary</text>
+<text x="604" y="717" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">billing_mode</text>
+<text x="604" y="743" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">…</text>
+<rect x="590" y="842" width="370" height="130" fill="#fff" stroke="#000" stroke-width="1.6" stroke-dasharray="7 5"/>
+<line x1="590" y1="878" x2="960" y2="878" stroke="#000" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text x="604" y="866" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="19" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">features.csv</text>
+<text x="604" y="905" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">session_id</text>
+<text x="946" y="905" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK, FK</text>
+<text x="604" y="931" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">frame_id</text>
+<text x="946" y="931" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" font-style="normal" text-anchor="end" fill="#000">PK, FK</text>
+<text x="604" y="957" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">sequence_start, delta_t_s, …</text>
+<text x="40" y="1017" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">PK</text>
+<text x="72" y="1017" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">clé primaire</text>
+<text x="210" y="1017" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" font-style="normal" text-anchor="start" fill="#000">FK</text>
+<text x="242" y="1017" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">clé étrangère</text>
+<text x="400" y="1017" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">1, 0..1, 0..*, 1..*</text>
+<text x="560" y="1017" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">multiplicités (notation UML)</text>
+<line x1="40" y1="1051" x2="100" y2="1051" stroke="#000" stroke-width="1.6"/>
+<text x="112" y="1057" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">lien par clé</text>
+<line x1="260" y1="1051" x2="320" y2="1051" stroke="#000" stroke-width="1.6" stroke-dasharray="9 6"/>
+<text x="332" y="1057" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">lien par plage d&#x27;images</text>
+<rect x="560" y="1039" width="44" height="24" fill="#fff" stroke="#000" stroke-width="1.6" stroke-dasharray="7 5"/>
+<text x="616" y="1057" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">fichier secondaire</text>
+<text x="800" y="1057" font-family="Liberation Mono, DejaVu Sans Mono, Courier New, monospace" font-size="18" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">…</text>
+<text x="824" y="1057" font-family="Liberation Sans, Arial, Helvetica, sans-serif" font-size="17" font-weight="normal" font-style="normal" text-anchor="start" fill="#000">autres colonnes</text>
+</svg>

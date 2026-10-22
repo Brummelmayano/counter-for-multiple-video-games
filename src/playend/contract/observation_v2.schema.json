@@ -1,0 +1,566 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": [
+        "2.1"
+      ]
+    },
+    "game": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "enum": [
+            "basketball",
+            "combat",
+            "combat_sport",
+            "football",
+            "mission_adventure",
+            "other",
+            "racing",
+            "tennis",
+            "unknown"
+          ]
+        },
+        "mode": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mode_duration": {
+          "enum": [
+            "bounded",
+            "continuous",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "title",
+        "type",
+        "mode",
+        "mode_duration",
+        "confidence"
+      ],
+      "additionalProperties": false
+    },
+    "state": {
+      "type": "object",
+      "properties": {
+        "phase": {
+          "enum": [
+            "active",
+            "intermediate",
+            "loading",
+            "menu",
+            "paused",
+            "post_game",
+            "pre_game",
+            "unknown"
+          ]
+        },
+        "screen_type": {
+          "enum": [
+            "character_select",
+            "cutscene",
+            "gameplay",
+            "loading",
+            "menu",
+            "other",
+            "pause",
+            "podium",
+            "race_grid",
+            "result",
+            "scoreboard",
+            "team_select",
+            "unknown"
+          ]
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "phase",
+        "screen_type",
+        "confidence"
+      ],
+      "additionalProperties": false
+    },
+    "participants": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "count_visible": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "required": [
+        "primary",
+        "count_visible"
+      ],
+      "additionalProperties": false
+    },
+    "score": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "b": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "type": {
+          "enum": [
+            null,
+            "games",
+            "goals",
+            "other",
+            "points",
+            "rounds_won",
+            "sets"
+          ]
+        },
+        "additional_scores": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "games": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "number",
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "sets": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "number",
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "tiebreak": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "number",
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "point_labels": {
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "number",
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              "required": [
+                "games",
+                "sets",
+                "tiebreak",
+                "point_labels"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "type",
+        "additional_scores"
+      ],
+      "additionalProperties": false
+    },
+    "clock": {
+      "type": "object",
+      "properties": {
+        "visible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "display": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value_seconds": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "direction": {
+          "enum": [
+            "unknown",
+            null
+          ]
+        }
+      },
+      "required": [
+        "visible",
+        "display",
+        "value_seconds",
+        "direction"
+      ],
+      "additionalProperties": false
+    },
+    "period": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "game",
+            "half",
+            "none",
+            "other",
+            "overtime",
+            "quarter",
+            "round",
+            "set",
+            "stage",
+            "unknown"
+          ]
+        },
+        "number": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "total": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      },
+      "required": [
+        "type",
+        "number",
+        "total"
+      ],
+      "additionalProperties": false
+    },
+    "progress": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            null,
+            "checkpoint",
+            "lap",
+            "objective",
+            "other",
+            "percentage",
+            "stage"
+          ]
+        },
+        "current": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "total": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "required": [
+        "type",
+        "current",
+        "total"
+      ],
+      "additionalProperties": false
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "current": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "total": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      },
+      "required": [
+        "current",
+        "total"
+      ],
+      "additionalProperties": false
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "visible": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "winner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outcome_type": {
+          "enum": [
+            null,
+            "decision",
+            "disqualification",
+            "draw",
+            "finish",
+            "ko",
+            "other",
+            "timeout",
+            "tko",
+            "win"
+          ]
+        }
+      },
+      "required": [
+        "visible",
+        "winner",
+        "outcome_type"
+      ],
+      "additionalProperties": false
+    },
+    "visible_entities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "observation_confidence": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "secondary_timers": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "storm_phase",
+                  "contract",
+                  "respawn",
+                  "ability_cooldown",
+                  "pre_match",
+                  "other",
+                  "unknown"
+                ]
+              },
+              "label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "display": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "value_seconds": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "direction": {
+                "type": "string",
+                "enum": [
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "label",
+              "display",
+              "value_seconds",
+              "direction"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "secondary_counters": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "players_remaining",
+                  "teams_remaining",
+                  "lives",
+                  "target",
+                  "series",
+                  "other",
+                  "unknown"
+                ]
+              },
+              "side": {
+                "type": "string",
+                "enum": [
+                  "a",
+                  "b",
+                  "field"
+                ]
+              },
+              "value": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "total": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "kind",
+              "side",
+              "value",
+              "total",
+              "label"
+            ],
+            "additionalProperties": false
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "game",
+    "state",
+    "participants",
+    "score",
+    "clock",
+    "period",
+    "progress",
+    "position",
+    "result",
+    "visible_entities",
+    "observation_confidence",
+    "secondary_timers",
+    "secondary_counters"
+  ],
+  "additionalProperties": false
+}
